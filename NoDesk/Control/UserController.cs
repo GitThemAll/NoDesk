@@ -9,8 +9,8 @@ namespace NoDesk
 	class UserController
 	{
 		public void addUser()
-		{
-			string username= "user";
+		{ 
+			 string username= "user";
 		}
 	}
 }
