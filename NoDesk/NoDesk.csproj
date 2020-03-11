@@ -41,6 +41,7 @@
     <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.2.0\lib\net471\DnsClient.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MongoDB.Bson, Version=2.10.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.10.2\lib\net452\MongoDB.Bson.dll</HintPath>
     </Reference>
@@ -83,11 +84,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\IController.cs" />
+    <Compile Include="Control\IncidentController.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Incident.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Control\UserController.cs" />
     <Compile Include="DAL\Config\Settings.cs" />
     <Compile Include="DAL\Database.cs" />
-    <Compile Include="DAL\QueryBuilder.cs" />
-    <Compile Include="Model\UserData.cs" />
     <Compile Include="View\NoDesk.cs">
       <SubType>Form</SubType>
     </Compile>

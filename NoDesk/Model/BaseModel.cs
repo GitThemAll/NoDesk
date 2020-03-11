@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NoDesk
 {
-	class QueryBuilder
+	public abstract class BaseModel
 	{
 	}
 }
