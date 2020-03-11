@@ -14,6 +14,8 @@ namespace NoDesk
 		[STAThread]
 		static void Main()
 		{
+			IncidentController controller= new IncidentController();
+			controller.getAll();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new NoDesk());

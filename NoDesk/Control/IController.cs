@@ -9,9 +9,9 @@ namespace NoDesk
 	interface IController
 	{
 		BaseModel get();
-		List<BaseModel> getMany();
-		void insert(BaseModel model);
-		void insertMany(List<BaseModel> models);
+		List<BaseModel> getMany(List<BaseModel> documents, SearchMethod searchMethod);
+		List<BaseModel> getAll();
+		void insert(List<BaseModel> documents);
 
 
 	}
