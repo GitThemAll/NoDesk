@@ -1,5 +1,5 @@
 {
-	"username": "test",
-	"password": "testpassword",
-	"clusterAddress": "testCluster"
+	"username": "AbdulSh",
+	"password": "Password12",
+	"clusterAddress": "clusterproject-d67qt.mongodb.net/test?retryWrites=true&w=majority"
 }

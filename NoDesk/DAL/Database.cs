@@ -8,14 +8,19 @@ using MongoDB.Bson;
 
 namespace NoDesk
 {
-	class Database
+	public static class Database
 	{
-		MongoClient client;
-		public Database()
+		public static MongoClient client;
+		public static IMongoDatabase database;
+		public static IMongoCollection<BsonDocument> userCollection;
+		public static IMongoCollection<BsonDocument> incidentCollection;
+		static Database()
 		{
-			this.client = new MongoClient(string.Format("mongodb+srv://{0}:{1}@{2}/test?retryWrites=true&w=majority",Settings.username, Settings.password, Settings.clusterAddress));
-
-
+			
+			client = new MongoClient(string.Format("mongodb+srv://{0}:{1}@{2}", Settings.username, Settings.password, Settings.clusterAddress));
+			database = client.GetDatabase("No_Desk");
+			userCollection = database.GetCollection<BsonDocument>("user");
+			incidentCollection = database.GetCollection<BsonDocument>("incident");
 		}
 
 	}
