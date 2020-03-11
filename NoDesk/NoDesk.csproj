@@ -105,7 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DAL\Config\Settings.json" />
+    <EmbeddedResource Include="View\NoDesk.resx">
+      <DependentUpon>NoDesk.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="DAL\Config\Settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
