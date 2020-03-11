@@ -18,7 +18,7 @@ namespace NoDesk
 
 		static Settings()
 		{
-			using (StreamReader reader = new StreamReader("D:\\localGithub\\NoDesk\\NoDesk\\DAL\\Config\\Settings.json"))
+			using (StreamReader reader = new StreamReader(Directory.GetCurrentDirectory()+"\\DAL\\Config\\Settings.json"))
 			{
 				string jsonSettingsString = reader.ReadToEnd();
 				JObject jsonSettings = JObject.Parse(jsonSettingsString);
