@@ -10,14 +10,13 @@ using System.Windows.Forms;
 
 namespace NoDesk
 {
-	public partial class NoDesk : Form
-	{
-		public NoDesk()
-		{
-			InitializeComponent();
-			
-		}
-		
+    public partial class Dashboard : Form
+    {
+        public Dashboard()
+        {
+            InitializeComponent();
+        }
 
-	}
+       
+    }
 }
