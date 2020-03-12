@@ -11,32 +11,38 @@ namespace NoDesk
 {
 	class IncidentController : IController
 	{
-		public BaseModel get()
+		public List<BaseModel> get(string searchExpression)
 		{
-			throw new NotImplementedException();
-		}
+			List<Incident> users = Database.incidentCollectionObjs.Find(searchExpression).ToList();
+			List<BaseModel> baseModels = new List<BaseModel>();
+			foreach (Incident incident in users)
+			{
 
-		public List<BaseModel> getMany(List<BaseModel> documents ,SearchMethod searchMethod )
-		{
-			throw new NotImplementedException();
+				baseModels.Add(incident);
+			}
+			return baseModels;
 		}
 
 		public List<BaseModel> getAll()
 		{
-			List<BaseModel> incidents = new List<BaseModel>();
-			var documents = Database.incidentCollection.Find(new BsonDocument()).ToList();
-			foreach (var document in documents)
+			List<BaseModel> baseModels = new List<BaseModel>();
+			var incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
+			foreach (Incident user in incidents)
 			{
-				User incident = BsonSerializer.Deserialize<User>(document);
-				incidents.Add(incident);
+
+				baseModels.Add(user);
 			}
-			return incidents;
+			return baseModels;
 		}
 
-
-		public void insert(List<BaseModel> documents)
+		public void insert(List<BaseModel> models)
 		{
-			throw new NotImplementedException();
+			List<Incident> incidents = new List<Incident>();
+			foreach (Incident model in models)
+			{
+				incidents.Add(model);
+			}
+			Database.incidentCollectionObjs.InsertMany(incidents);
 		}
 	}
 }

@@ -12,6 +12,9 @@ namespace NoDesk
 	{
 		public static MongoClient client;
 		public static IMongoDatabase database;
+		public static IMongoCollection<User> userCollectionObjs;
+		public static IMongoCollection<Incident> incidentCollectionObjs;
+		//prins uses these two fields.
 		public static IMongoCollection<BsonDocument> userCollection;
 		public static IMongoCollection<BsonDocument> incidentCollection;
 		static Database()
@@ -19,6 +22,9 @@ namespace NoDesk
 			
 			client = new MongoClient(string.Format("mongodb+srv://{0}:{1}@{2}", Settings.username, Settings.password, Settings.clusterAddress));
 			database = client.GetDatabase("No_Desk");
+			userCollectionObjs = database.GetCollection<User>("user");
+			incidentCollectionObjs = database.GetCollection<Incident>("incident");
+			//prins uses these two fields.
 			userCollection = database.GetCollection<BsonDocument>("user");
 			incidentCollection = database.GetCollection<BsonDocument>("incident");
 		}

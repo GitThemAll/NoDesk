@@ -10,10 +10,16 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace NoDesk
 {
 	[BsonIgnoreExtraElements]
-	class User : BaseModel 
+	public class User : BaseModel 
 	{
 		[BsonRepresentation(BsonType.ObjectId)]
 		public string id { get; set; }
+
+		[BsonElement("firstname")]
+		public string firstname { get; set; }
+
+		[BsonElement("lastname")]
+		public string lastname { get; set; }
 
 		[BsonElement("name")]
 		public string name { get; set; }

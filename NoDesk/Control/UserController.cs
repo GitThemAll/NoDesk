@@ -13,33 +13,44 @@ namespace NoDesk
 {
 	class UserController : IController
 	{
-		public BaseModel get()
-		{
-			throw new NotImplementedException();
-		}
+		
 
-		public List<BaseModel> getMany(List<BaseModel> documents, SearchMethod searchMethod)
+		public List<BaseModel> get(string searchExpression)
 		{
-			throw new NotImplementedException();
+
+			List<User> users = Database.userCollectionObjs.Find(searchExpression).ToList();
+			List<BaseModel> baseModels = new List<BaseModel>();
+			foreach (User user in users)
+			{
+
+				baseModels.Add(user);
+			}
+			return baseModels;
+
+
 		}
 
 		public List<BaseModel> getAll()
 		{
 
-			List<BaseModel> users = new List<BaseModel>();
-			var documents = Database.userCollection.Find(new BsonDocument()).ToList();
-			foreach (var document in documents)
+			List<BaseModel> baseModels = new List<BaseModel>();
+			var users = Database.userCollectionObjs.Find(new BsonDocument()).ToList();
+			foreach (User user in users)
 			{
-				User user= BsonSerializer.Deserialize<User>(document);
-				users.Add(user);
-			}
-			return users;
-		}
 
+				baseModels.Add(user);
+			}
+			return baseModels;
+		}
 		
-		public void insert(List<BaseModel> documents)
+		public void insert(List<BaseModel> models)
 		{
-			throw new NotImplementedException();
+			List<User> users = new List<User>();
+			foreach (User model in models)
+			{
+				users.Add(model);
+			}
+			Database.userCollectionObjs.InsertMany(users);
 		}
 	}
 }
