@@ -8,8 +8,7 @@ namespace NoDesk
 {
 	interface IController
 	{
-		BaseModel get();
-		List<BaseModel> getMany(List<BaseModel> documents, SearchMethod searchMethod);
+		List<BaseModel> get(string searchExpression);
 		List<BaseModel> getAll();
 		void insert(List<BaseModel> documents);
 
