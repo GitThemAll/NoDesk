@@ -12,6 +12,8 @@ namespace NoDesk
 {
 	public partial class NoDesk : Form
 	{
+		UserController userController = new UserController();
+		User currentuser;
 		public NoDesk()
 		{
 			InitializeComponent();
@@ -20,7 +22,26 @@ namespace NoDesk
 
 		private void label1_Click(object sender, EventArgs e)
 		{
-			label1.Text=	Database.database.ToString();
+			//label1.Text=	user.email;
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			if (true)
+			{
+				currentuser = userController.getLogin("prinsalvino@gmail.com", "Yes123");
+				label1.Text = currentuser.name + currentuser.email;
+			}
+			else
+			{
+				label1.Text = "Wrong Credentials";
+			}
+			
+		}
+
+		private void NoDesk_Load(object sender, EventArgs e)
+		{
+			//User user = UserController.getLogin(label1.Text.ToString());
 		}
 	}
 }

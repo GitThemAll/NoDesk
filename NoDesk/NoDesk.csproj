@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Control\IController.cs" />
     <Compile Include="Control\IncidentController.cs" />
+    <Compile Include="DAL\UserQuery.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\Incident.cs" />
     <Compile Include="Model\User.cs" />

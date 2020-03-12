@@ -23,5 +23,6 @@ namespace NoDesk
 			incidentCollection = database.GetCollection<BsonDocument>("incident");
 		}
 
+
 	}
 }
