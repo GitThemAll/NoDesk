@@ -29,7 +29,7 @@ namespace NoDesk
 			return baseModels;
 
 
-		
+		}
 		public User GetLogin(string email, string password)
 		{
 			var filter = Builders<BsonDocument>.Filter.Eq("email", email) & Builders<BsonDocument>.Filter.Eq("password", password);
