@@ -18,11 +18,13 @@ namespace NoDesk
 		[BsonElement("firstname")]
 		public string firstname { get; set; }
 
+
 		[BsonElement("lastname")]
 		public string lastname { get; set; }
 
 		[BsonElement("name")]
 		public string name { get; set; }
+
 
 		[BsonElement("email")]
 		public string email { get; set; }
