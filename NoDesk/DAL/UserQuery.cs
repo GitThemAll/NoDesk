@@ -23,8 +23,9 @@ namespace NoDesk
             var document = Database.userCollection.Find(filter).First();
             User user = new User()
             {
-                name = document.GetValue(1).ToString(),
-                email = document.GetValue(2).ToString()
+                firstname = document.GetValue(1).ToString(),
+                lastname = document.GetValue(2).ToString(),
+                email = document.GetValue(3).ToString()
             };
             return user;
         }
@@ -35,9 +36,13 @@ namespace NoDesk
             var documents = Database.userCollection.Find(filter).ToList();
             foreach (var document in documents)
             {
-                User user = new User();
-                user.name = document.GetValue(0).ToString();
-                user.password = document.GetValue(1).ToString();
+                User user = new User()
+                {
+                    firstname = document.GetValue(1).ToString(),
+                    lastname = document.GetValue(2).ToString(),
+                    email = document.GetValue(3).ToString()
+                };
+             
             }
        
             return users;
