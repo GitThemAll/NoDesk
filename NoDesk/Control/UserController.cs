@@ -13,7 +13,7 @@ namespace NoDesk
 {
 	class UserController : IController
 	{
-		
+
 
 		public List<BaseModel> get(string searchExpression)
 		{
@@ -26,10 +26,11 @@ namespace NoDesk
 
 				baseModels.Add(user);
 			}
+
 			return baseModels;
 
+		}
 
-		
 		public User GetLogin(string email, string password)
 		{
 			var filter = Builders<BsonDocument>.Filter.Eq("email", email) & Builders<BsonDocument>.Filter.Eq("password", password);
@@ -67,4 +68,5 @@ namespace NoDesk
 			Database.userCollectionObjs.InsertMany(users);
 		}
 	}
-}
+
+	}
