@@ -28,5 +28,10 @@ namespace NoDesk
 
             }
         }
+
+        private void close_btn_Click(object sender, EventArgs e)
+        {
+            NoDesk.ActiveForm.Close();
+        }
     }
 }

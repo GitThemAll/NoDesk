@@ -32,12 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.password_txt = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.login_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.close_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -83,36 +84,6 @@
             this.panel2.Size = new System.Drawing.Size(300, 1);
             this.panel2.TabIndex = 6;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::NoDesk.Properties.Resources._41eaa115_18dd_47a8_aed7_ff755c8e72a6_200x200;
-            this.pictureBox4.Location = new System.Drawing.Point(205, 380);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::NoDesk.Properties.Resources._6aebbf0f_5f00_405b_9180_92d09d3cea94_200x200;
-            this.pictureBox2.Location = new System.Drawing.Point(226, 265);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // logo
-            // 
-            this.logo.Image = global::NoDesk.Properties.Resources.garden_group_logo;
-            this.logo.Location = new System.Drawing.Point(155, 45);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(200, 200);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.logo.TabIndex = 0;
-            this.logo.TabStop = false;
-            // 
             // login_btn
             // 
             this.login_btn.BackColor = System.Drawing.Color.White;
@@ -149,12 +120,55 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Password";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::NoDesk.Properties.Resources._41eaa115_18dd_47a8_aed7_ff755c8e72a6_200x200;
+            this.pictureBox4.Location = new System.Drawing.Point(205, 380);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::NoDesk.Properties.Resources._6aebbf0f_5f00_405b_9180_92d09d3cea94_200x200;
+            this.pictureBox2.Location = new System.Drawing.Point(226, 265);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(59, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // logo
+            // 
+            this.logo.Image = global::NoDesk.Properties.Resources.garden_group_logo;
+            this.logo.Location = new System.Drawing.Point(155, 45);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(200, 200);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
+            // 
+            // close_btn
+            // 
+            this.close_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_btn.ForeColor = System.Drawing.Color.Red;
+            this.close_btn.Location = new System.Drawing.Point(466, 12);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(30, 30);
+            this.close_btn.TabIndex = 11;
+            this.close_btn.Text = "X";
+            this.close_btn.UseVisualStyleBackColor = true;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            // 
             // NoDesk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(507, 716);
+            this.Controls.Add(this.close_btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.login_btn);
@@ -191,6 +205,7 @@
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button close_btn;
     }
 }
 
