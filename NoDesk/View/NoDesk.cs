@@ -20,10 +20,13 @@ namespace NoDesk
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            string email = userName_txt.Text;
-            string password = password_txt.Text;
+            string email = (userName_txt.Text).Trim();
+            string password = (password_txt.Text).Trim();
 
+            if (!string.IsNullOrEmpty(email)|| !string.IsNullOrEmpty(password))
+            {
 
+            }
         }
     }
 }

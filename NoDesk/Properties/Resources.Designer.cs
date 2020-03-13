@@ -83,26 +83,6 @@ namespace NoDesk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _97243856_9c89_41fe_ad08_8c13a6470280_200x200 {
-            get {
-                object obj = ResourceManager.GetObject("97243856-9c89-41fe-ad08-8c13a6470280_200x200", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _97243856_9c89_41fe_ad08_8c13a6470280_200x2001 {
-            get {
-                object obj = ResourceManager.GetObject("97243856-9c89-41fe-ad08-8c13a6470280_200x2001", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap garden_group_logo {
             get {
                 object obj = ResourceManager.GetObject("garden group logo", resourceCulture);
