@@ -115,8 +115,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="Resources\41eaa115-18dd-47a8-aed7-ff755c8e72a6_200x200.png" />
-    <None Include="Resources\97243856-9c89-41fe-ad08-8c13a6470280_200x2001.png" />
-    <None Include="Resources\97243856-9c89-41fe-ad08-8c13a6470280_200x200.png" />
     <None Include="Resources\6aebbf0f-5f00-405b-9180-92d09d3cea94_200x200.png" />
     <None Include="Resources\garden group logo.png" />
     <EmbeddedResource Include="Properties\Resources.resx">
