@@ -31,16 +31,11 @@ namespace NoDesk
 
 		}
 
+
 		public User GetLogin(string email, string password)
 		{
 			var filter = Builders<BsonDocument>.Filter.Eq("email", email) & Builders<BsonDocument>.Filter.Eq("password", password);
 			var document = Database.userCollection.Find(filter).First();
-			/*User user = new User()
-			{
-				firstname = document.GetValue(1).ToString(),
-				lastname = document.GetValue(2).ToString(),
-				email = document.GetValue(3).ToString()
-			};*/
 			User user = BsonSerializer.Deserialize<User>(document);
 			return user;
 
@@ -68,5 +63,4 @@ namespace NoDesk
 			Database.userCollectionObjs.InsertMany(users);
 		}
 	}
-
-	}
+}
