@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
@@ -11,24 +12,14 @@ using Newtonsoft.Json.Linq;
 
 namespace NoDesk
 {
-	class UserController : IController
+	class UserController 
 	{
 
 
-		public List<BaseModel> get(string searchExpression)
+		public List<User> get(Expression<Func<User, bool>> filter)
 		{
-
-
-			List<User> users = Database.userCollectionObjs.Find(searchExpression).ToList();
-			List<BaseModel> baseModels = new List<BaseModel>();
-			foreach (User user in users)
-			{
-
-				baseModels.Add(user);
-			}
-
-			return baseModels;
-
+			List<User> users = Database.userCollectionObjs.Find(filter).ToList();
+			return users;
 		}
 
 
@@ -40,17 +31,10 @@ namespace NoDesk
 			return user;
 
 		}
-		public List<BaseModel> getAll()
+		public List<User> getAll()
 		{
-
-			List<BaseModel> baseModels = new List<BaseModel>();
 			var users = Database.userCollectionObjs.Find(new BsonDocument()).ToList();
-			foreach (User user in users)
-			{
-
-				baseModels.Add(user);
-			}
-			return baseModels;
+			return users;
 		}
 		
 		public void insert(List<BaseModel> models)

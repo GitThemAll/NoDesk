@@ -13,7 +13,7 @@ namespace NoDesk
 	public class User : BaseModel 
 	{
 		[BsonRepresentation(BsonType.ObjectId)]
-		public string id { get; set; }
+		public ObjectId id { get; set; }
 
 		[BsonElement("firstname")]
 		public string firstname { get; set; }

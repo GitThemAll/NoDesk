@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace NoDesk
 {
-	interface IController
+	public enum IncidentStatus
 	{
-		List<BaseModel> get(string searchExpression);
-		List<BaseModel> getAll();
-		void insert(List<BaseModel> documents);
-
-
+		Solved = 10,
+		NotSolved =20,
+		InProgress = 30,
+		CouldNotBeSolved =40
 	}
 }

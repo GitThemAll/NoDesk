@@ -13,7 +13,7 @@ namespace NoDesk
 
 	{
 		[BsonRepresentation(BsonType.ObjectId)]
-		public string id { get; set; }
+		public ObjectId id { get; set; }
 
 		[BsonElement("subject")]
 		public string subject { get; set; }
@@ -21,8 +21,9 @@ namespace NoDesk
 		[BsonElement("user")]
 		public string user { get; set; }
 
+		[BsonDateTimeOptions(Kind = DateTimeKind.Local)]
 		[BsonElement("date")]
-		public string date { get; set; }
+		public DateTime date { get; set; }
 
 		[BsonElement("status")]
 		public string status { get; set; }
@@ -33,8 +34,9 @@ namespace NoDesk
 		[BsonElement("assignedEmployee")]
 		public string assignedEmployee { get; set; }
 
+		[BsonDateTimeOptions(Kind = DateTimeKind.Local)]
 		[BsonElement("dueDate")]
-		public string dueDate { get; set; }
+		public DateTime dueDate { get; set; }
 	}
 }
 

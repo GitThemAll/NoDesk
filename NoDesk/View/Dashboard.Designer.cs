@@ -39,12 +39,15 @@
 			this.gardengroupLBL = new System.Windows.Forms.Label();
 			this.topPanel = new System.Windows.Forms.Panel();
 			this.dashboardLBL = new System.Windows.Forms.Label();
-			this.circleProgressBar1 = new CircularProgressBar.CircularProgressBar();
+			this.UnResolvedIncidentsProgressBar = new CircularProgressBar.CircularProgressBar();
 			this.unresolvedLBL = new System.Windows.Forms.Label();
 			this.ticketsopenLBL = new System.Windows.Forms.Label();
-			this.circleProgressBar2 = new CircularProgressBar.CircularProgressBar();
+			this.PastIncidentsProgressBar = new CircularProgressBar.CircularProgressBar();
 			this.attentionLBL = new System.Windows.Forms.Label();
 			this.deadlineLBL = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.ResolvedIncidentsProgressBar = new CircularProgressBar.CircularProgressBar();
 			this.leftPanel.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.topLeftPanel.SuspendLayout();
@@ -192,113 +195,167 @@
 			this.dashboardLBL.TabIndex = 0;
 			this.dashboardLBL.Text = "Dashboard";
 			// 
-			// circleProgressBar1
+			// UnResolvedIncidentsProgressBar
 			// 
-			this.circleProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-			this.circleProgressBar1.AnimationSpeed = 500;
-			this.circleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-			this.circleProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.circleProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.circleProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.circleProgressBar1.InnerMargin = 2;
-			this.circleProgressBar1.InnerWidth = -1;
-			this.circleProgressBar1.Location = new System.Drawing.Point(320, 227);
-			this.circleProgressBar1.MarqueeAnimationSpeed = 2000;
-			this.circleProgressBar1.Name = "circleProgressBar1";
-			this.circleProgressBar1.OuterColor = System.Drawing.Color.Gray;
-			this.circleProgressBar1.OuterMargin = -25;
-			this.circleProgressBar1.OuterWidth = 26;
-			this.circleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
-			this.circleProgressBar1.ProgressWidth = 15;
-			this.circleProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.circleProgressBar1.Size = new System.Drawing.Size(270, 270);
-			this.circleProgressBar1.StartAngle = 270;
-			this.circleProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circleProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-			this.circleProgressBar1.SubscriptText = "";
-			this.circleProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circleProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-			this.circleProgressBar1.SuperscriptText = "";
-			this.circleProgressBar1.TabIndex = 2;
-			this.circleProgressBar1.Text = "7/15";
-			this.circleProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-			this.circleProgressBar1.Value = 45;
+			this.UnResolvedIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+			this.UnResolvedIncidentsProgressBar.AnimationSpeed = 500;
+			this.UnResolvedIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
+			this.UnResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.UnResolvedIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.UnResolvedIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.UnResolvedIncidentsProgressBar.InnerMargin = 2;
+			this.UnResolvedIncidentsProgressBar.InnerWidth = -1;
+			this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(551, 227);
+			this.UnResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
+			this.UnResolvedIncidentsProgressBar.Name = "UnResolvedIncidentsProgressBar";
+			this.UnResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
+			this.UnResolvedIncidentsProgressBar.OuterMargin = -25;
+			this.UnResolvedIncidentsProgressBar.OuterWidth = 26;
+			this.UnResolvedIncidentsProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
+			this.UnResolvedIncidentsProgressBar.ProgressWidth = 15;
+			this.UnResolvedIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.UnResolvedIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+			this.UnResolvedIncidentsProgressBar.StartAngle = 270;
+			this.UnResolvedIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.UnResolvedIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+			this.UnResolvedIncidentsProgressBar.SubscriptText = "";
+			this.UnResolvedIncidentsProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.UnResolvedIncidentsProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+			this.UnResolvedIncidentsProgressBar.SuperscriptText = "";
+			this.UnResolvedIncidentsProgressBar.TabIndex = 2;
+			this.UnResolvedIncidentsProgressBar.Text = "7/15";
+			this.UnResolvedIncidentsProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+			this.UnResolvedIncidentsProgressBar.Value = 60;
 			// 
 			// unresolvedLBL
 			// 
 			this.unresolvedLBL.AutoSize = true;
-			this.unresolvedLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.unresolvedLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
 			this.unresolvedLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-			this.unresolvedLBL.Location = new System.Drawing.Point(303, 132);
+			this.unresolvedLBL.Location = new System.Drawing.Point(531, 132);
 			this.unresolvedLBL.Name = "unresolvedLBL";
-			this.unresolvedLBL.Size = new System.Drawing.Size(308, 33);
+			this.unresolvedLBL.Size = new System.Drawing.Size(206, 24);
 			this.unresolvedLBL.TabIndex = 3;
 			this.unresolvedLBL.Text = "Unresolved Incidents";
 			// 
 			// ticketsopenLBL
 			// 
 			this.ticketsopenLBL.AutoSize = true;
-			this.ticketsopenLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ticketsopenLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
 			this.ticketsopenLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-			this.ticketsopenLBL.Location = new System.Drawing.Point(358, 179);
+			this.ticketsopenLBL.Location = new System.Drawing.Point(565, 179);
 			this.ticketsopenLBL.Name = "ticketsopenLBL";
-			this.ticketsopenLBL.Size = new System.Drawing.Size(190, 20);
+			this.ticketsopenLBL.Size = new System.Drawing.Size(145, 15);
 			this.ticketsopenLBL.TabIndex = 4;
 			this.ticketsopenLBL.Text = "All Tickets Currently Open";
 			// 
-			// circleProgressBar2
+			// PastIncidentsProgressBar
 			// 
-			this.circleProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-			this.circleProgressBar2.AnimationSpeed = 500;
-			this.circleProgressBar2.BackColor = System.Drawing.Color.Transparent;
-			this.circleProgressBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.circleProgressBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.circleProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.circleProgressBar2.InnerMargin = 2;
-			this.circleProgressBar2.InnerWidth = -1;
-			this.circleProgressBar2.Location = new System.Drawing.Point(711, 227);
-			this.circleProgressBar2.MarqueeAnimationSpeed = 2000;
-			this.circleProgressBar2.Name = "circleProgressBar2";
-			this.circleProgressBar2.OuterColor = System.Drawing.Color.Gray;
-			this.circleProgressBar2.OuterMargin = -25;
-			this.circleProgressBar2.OuterWidth = 26;
-			this.circleProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-			this.circleProgressBar2.ProgressWidth = 15;
-			this.circleProgressBar2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.circleProgressBar2.Size = new System.Drawing.Size(270, 270);
-			this.circleProgressBar2.StartAngle = 270;
-			this.circleProgressBar2.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circleProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-			this.circleProgressBar2.SubscriptText = "";
-			this.circleProgressBar2.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-			this.circleProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-			this.circleProgressBar2.SuperscriptText = "";
-			this.circleProgressBar2.TabIndex = 5;
-			this.circleProgressBar2.Text = "1";
-			this.circleProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-			this.circleProgressBar2.Value = 60;
+			this.PastIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+			this.PastIncidentsProgressBar.AnimationSpeed = 500;
+			this.PastIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
+			this.PastIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.PastIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.PastIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.PastIncidentsProgressBar.InnerMargin = 2;
+			this.PastIncidentsProgressBar.InnerWidth = -1;
+			this.PastIncidentsProgressBar.Location = new System.Drawing.Point(812, 227);
+			this.PastIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
+			this.PastIncidentsProgressBar.Name = "PastIncidentsProgressBar";
+			this.PastIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
+			this.PastIncidentsProgressBar.OuterMargin = -25;
+			this.PastIncidentsProgressBar.OuterWidth = 26;
+			this.PastIncidentsProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.PastIncidentsProgressBar.ProgressWidth = 15;
+			this.PastIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.PastIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+			this.PastIncidentsProgressBar.StartAngle = 270;
+			this.PastIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.PastIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+			this.PastIncidentsProgressBar.SubscriptText = "";
+			this.PastIncidentsProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.PastIncidentsProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+			this.PastIncidentsProgressBar.SuperscriptText = "";
+			this.PastIncidentsProgressBar.TabIndex = 5;
+			this.PastIncidentsProgressBar.Text = "1";
+			this.PastIncidentsProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+			this.PastIncidentsProgressBar.Value = 60;
 			// 
 			// attentionLBL
 			// 
 			this.attentionLBL.AutoSize = true;
-			this.attentionLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.attentionLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
 			this.attentionLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-			this.attentionLBL.Location = new System.Drawing.Point(695, 179);
+			this.attentionLBL.Location = new System.Drawing.Point(800, 179);
 			this.attentionLBL.Name = "attentionLBL";
-			this.attentionLBL.Size = new System.Drawing.Size(297, 20);
+			this.attentionLBL.Size = new System.Drawing.Size(227, 15);
 			this.attentionLBL.TabIndex = 7;
 			this.attentionLBL.Text = "These Tickets Need Immediate Attention";
 			// 
 			// deadlineLBL
 			// 
 			this.deadlineLBL.AutoSize = true;
-			this.deadlineLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.deadlineLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
 			this.deadlineLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-			this.deadlineLBL.Location = new System.Drawing.Point(687, 132);
+			this.deadlineLBL.Location = new System.Drawing.Point(799, 132);
 			this.deadlineLBL.Name = "deadlineLBL";
-			this.deadlineLBL.Size = new System.Drawing.Size(344, 33);
+			this.deadlineLBL.Size = new System.Drawing.Size(228, 24);
 			this.deadlineLBL.TabIndex = 6;
 			this.deadlineLBL.Text = "Incidents Past Deadline";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+			this.label1.Location = new System.Drawing.Point(306, 179);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(145, 15);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "All Tickets Currently Open";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+			this.label2.Location = new System.Drawing.Point(289, 132);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(187, 24);
+			this.label2.TabIndex = 9;
+			this.label2.Text = "Resolved Incidents";
+			// 
+			// ResolvedIncidentsProgressBar
+			// 
+			this.ResolvedIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+			this.ResolvedIncidentsProgressBar.AnimationSpeed = 500;
+			this.ResolvedIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
+			this.ResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ResolvedIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ResolvedIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ResolvedIncidentsProgressBar.InnerMargin = 2;
+			this.ResolvedIncidentsProgressBar.InnerWidth = -1;
+			this.ResolvedIncidentsProgressBar.Location = new System.Drawing.Point(290, 227);
+			this.ResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
+			this.ResolvedIncidentsProgressBar.Name = "ResolvedIncidentsProgressBar";
+			this.ResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
+			this.ResolvedIncidentsProgressBar.OuterMargin = -25;
+			this.ResolvedIncidentsProgressBar.OuterWidth = 26;
+			this.ResolvedIncidentsProgressBar.ProgressColor = System.Drawing.Color.SeaGreen;
+			this.ResolvedIncidentsProgressBar.ProgressWidth = 15;
+			this.ResolvedIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ResolvedIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+			this.ResolvedIncidentsProgressBar.StartAngle = 270;
+			this.ResolvedIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.ResolvedIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+			this.ResolvedIncidentsProgressBar.SubscriptText = "";
+			this.ResolvedIncidentsProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+			this.ResolvedIncidentsProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+			this.ResolvedIncidentsProgressBar.SuperscriptText = "";
+			this.ResolvedIncidentsProgressBar.TabIndex = 8;
+			this.ResolvedIncidentsProgressBar.Text = "7/15";
+			this.ResolvedIncidentsProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+			this.ResolvedIncidentsProgressBar.Value = 60;
 			// 
 			// Dashboard
 			// 
@@ -306,12 +363,15 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ScrollBar;
 			this.ClientSize = new System.Drawing.Size(1062, 565);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.ResolvedIncidentsProgressBar);
 			this.Controls.Add(this.attentionLBL);
 			this.Controls.Add(this.deadlineLBL);
-			this.Controls.Add(this.circleProgressBar2);
+			this.Controls.Add(this.PastIncidentsProgressBar);
 			this.Controls.Add(this.ticketsopenLBL);
 			this.Controls.Add(this.unresolvedLBL);
-			this.Controls.Add(this.circleProgressBar1);
+			this.Controls.Add(this.UnResolvedIncidentsProgressBar);
 			this.Controls.Add(this.topPanel);
 			this.Controls.Add(this.leftPanel);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,11 +404,14 @@
         private System.Windows.Forms.Label dashboardLBL;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label copyLBL;
-        private CircularProgressBar.CircularProgressBar circleProgressBar1;
+        private CircularProgressBar.CircularProgressBar UnResolvedIncidentsProgressBar;
         private System.Windows.Forms.Label unresolvedLBL;
         private System.Windows.Forms.Label ticketsopenLBL;
-        private CircularProgressBar.CircularProgressBar circleProgressBar2;
+        private CircularProgressBar.CircularProgressBar PastIncidentsProgressBar;
         private System.Windows.Forms.Label attentionLBL;
         private System.Windows.Forms.Label deadlineLBL;
-    }
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private CircularProgressBar.CircularProgressBar ResolvedIncidentsProgressBar;
+	}
 }
