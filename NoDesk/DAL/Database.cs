@@ -10,13 +10,11 @@ namespace NoDesk
 {
 	public static class Database
 	{
+		//todo make call async
 		public static MongoClient client;
 		public static IMongoDatabase database;
 		public static IMongoCollection<User> userCollectionObjs;
 		public static IMongoCollection<Incident> incidentCollectionObjs;
-		//prins uses these two fields.
-		public static IMongoCollection<BsonDocument> userCollection;
-		public static IMongoCollection<BsonDocument> incidentCollection;
 		static Database()
 		{
 			
@@ -24,9 +22,7 @@ namespace NoDesk
 			database = client.GetDatabase("No_Desk");
 			userCollectionObjs = database.GetCollection<User>("user");
 			incidentCollectionObjs = database.GetCollection<Incident>("incident");
-			//prins uses these two fields.
-			userCollection = database.GetCollection<BsonDocument>("user");
-			incidentCollection = database.GetCollection<BsonDocument>("incident");
+	
 		}
 
 	}
