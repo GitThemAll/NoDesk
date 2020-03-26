@@ -66,7 +66,7 @@
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(289, 581);
+            this.leftPanel.Size = new System.Drawing.Size(250, 502);
             this.leftPanel.TabIndex = 1;
             // 
             // panel1
@@ -74,10 +74,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.copyLBL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 524);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 456);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 57);
+            this.panel1.Size = new System.Drawing.Size(250, 46);
             this.panel1.TabIndex = 4;
             // 
             // copyLBL
@@ -85,9 +85,10 @@
             this.copyLBL.AutoSize = true;
             this.copyLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyLBL.ForeColor = System.Drawing.Color.White;
-            this.copyLBL.Location = new System.Drawing.Point(14, 18);
+            this.copyLBL.Location = new System.Drawing.Point(10, 15);
+            this.copyLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.copyLBL.Name = "copyLBL";
-            this.copyLBL.Size = new System.Drawing.Size(183, 29);
+            this.copyLBL.Size = new System.Drawing.Size(142, 24);
             this.copyLBL.TabIndex = 0;
             this.copyLBL.Text = "© 2020 Group 1";
             // 
@@ -99,10 +100,10 @@
             this.usermanageBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usermanageBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usermanageBTN.ForeColor = System.Drawing.Color.White;
-            this.usermanageBTN.Location = new System.Drawing.Point(0, 261);
-            this.usermanageBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.usermanageBTN.Location = new System.Drawing.Point(0, 213);
+            this.usermanageBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usermanageBTN.Name = "usermanageBTN";
-            this.usermanageBTN.Size = new System.Drawing.Size(289, 82);
+            this.usermanageBTN.Size = new System.Drawing.Size(250, 67);
             this.usermanageBTN.TabIndex = 3;
             this.usermanageBTN.Text = "User Management";
             this.usermanageBTN.UseVisualStyleBackColor = false;
@@ -115,10 +116,10 @@
             this.incidentBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.incidentBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incidentBTN.ForeColor = System.Drawing.Color.White;
-            this.incidentBTN.Location = new System.Drawing.Point(0, 179);
-            this.incidentBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.incidentBTN.Location = new System.Drawing.Point(0, 146);
+            this.incidentBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.incidentBTN.Name = "incidentBTN";
-            this.incidentBTN.Size = new System.Drawing.Size(289, 82);
+            this.incidentBTN.Size = new System.Drawing.Size(250, 67);
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
             this.incidentBTN.UseVisualStyleBackColor = true;
@@ -131,10 +132,10 @@
             this.dashboardBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardBTN.ForeColor = System.Drawing.Color.White;
-            this.dashboardBTN.Location = new System.Drawing.Point(0, 97);
-            this.dashboardBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dashboardBTN.Location = new System.Drawing.Point(0, 79);
+            this.dashboardBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dashboardBTN.Name = "dashboardBTN";
-            this.dashboardBTN.Size = new System.Drawing.Size(289, 82);
+            this.dashboardBTN.Size = new System.Drawing.Size(250, 67);
             this.dashboardBTN.TabIndex = 1;
             this.dashboardBTN.Text = "Dashboard";
             this.dashboardBTN.UseVisualStyleBackColor = false;
@@ -149,7 +150,7 @@
             this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.topLeftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topLeftPanel.Name = "topLeftPanel";
-            this.topLeftPanel.Size = new System.Drawing.Size(289, 97);
+            this.topLeftPanel.Size = new System.Drawing.Size(250, 79);
             this.topLeftPanel.TabIndex = 0;
             // 
             // servicedeskLBL
@@ -157,10 +158,10 @@
             this.servicedeskLBL.AutoSize = true;
             this.servicedeskLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.servicedeskLBL.ForeColor = System.Drawing.Color.White;
-            this.servicedeskLBL.Location = new System.Drawing.Point(63, 55);
+            this.servicedeskLBL.Location = new System.Drawing.Point(47, 45);
             this.servicedeskLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.servicedeskLBL.Name = "servicedeskLBL";
-            this.servicedeskLBL.Size = new System.Drawing.Size(175, 31);
+            this.servicedeskLBL.Size = new System.Drawing.Size(139, 25);
             this.servicedeskLBL.TabIndex = 1;
             this.servicedeskLBL.Text = "Service Desk";
             // 
@@ -169,10 +170,10 @@
             this.gardengroupLBL.AutoSize = true;
             this.gardengroupLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gardengroupLBL.ForeColor = System.Drawing.Color.White;
-            this.gardengroupLBL.Location = new System.Drawing.Point(21, 20);
+            this.gardengroupLBL.Location = new System.Drawing.Point(16, 16);
             this.gardengroupLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gardengroupLBL.Name = "gardengroupLBL";
-            this.gardengroupLBL.Size = new System.Drawing.Size(280, 42);
+            this.gardengroupLBL.Size = new System.Drawing.Size(222, 33);
             this.gardengroupLBL.TabIndex = 0;
             this.gardengroupLBL.Text = "Garden Group ";
             // 
@@ -181,10 +182,10 @@
             this.topPanel.BackColor = System.Drawing.Color.White;
             this.topPanel.Controls.Add(this.titlelbl);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(289, 0);
+            this.topPanel.Location = new System.Drawing.Point(250, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(752, 97);
+            this.topPanel.Size = new System.Drawing.Size(768, 79);
             this.topPanel.TabIndex = 2;
             // 
             // titlelbl
@@ -192,18 +193,20 @@
             this.titlelbl.AutoSize = true;
             this.titlelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.titlelbl.Location = new System.Drawing.Point(41, 31);
+            this.titlelbl.Location = new System.Drawing.Point(31, 25);
+            this.titlelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titlelbl.Name = "titlelbl";
-            this.titlelbl.Size = new System.Drawing.Size(346, 46);
+            this.titlelbl.Size = new System.Drawing.Size(279, 37);
             this.titlelbl.TabIndex = 0;
             this.titlelbl.Text = "User Management";
             // 
             // searchtxt
             // 
-            this.searchtxt.Location = new System.Drawing.Point(338, 132);
+            this.searchtxt.Location = new System.Drawing.Point(288, 108);
+            this.searchtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchtxt.Name = "searchtxt";
             this.searchtxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.searchtxt.Size = new System.Drawing.Size(196, 22);
+            this.searchtxt.Size = new System.Drawing.Size(148, 20);
             this.searchtxt.TabIndex = 3;
             this.searchtxt.Text = "Search by Email";
             this.searchtxt.TextChanged += new System.EventHandler(this.searchtxt_TextChanged);
@@ -211,9 +214,10 @@
             // btnadduser
             // 
             this.btnadduser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnadduser.Location = new System.Drawing.Point(815, 132);
+            this.btnadduser.Location = new System.Drawing.Point(869, 108);
+            this.btnadduser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnadduser.Name = "btnadduser";
-            this.btnadduser.Size = new System.Drawing.Size(142, 40);
+            this.btnadduser.Size = new System.Drawing.Size(106, 32);
             this.btnadduser.TabIndex = 4;
             this.btnadduser.Text = "Add New User";
             this.btnadduser.UseVisualStyleBackColor = false;
@@ -228,11 +232,12 @@
             this.FirstName,
             this.LastName,
             this.ticketsid});
-            this.GVUser.Location = new System.Drawing.Point(338, 179);
+            this.GVUser.Location = new System.Drawing.Point(288, 146);
+            this.GVUser.Margin = new System.Windows.Forms.Padding(2);
             this.GVUser.Name = "GVUser";
             this.GVUser.RowHeadersWidth = 51;
             this.GVUser.RowTemplate.Height = 24;
-            this.GVUser.Size = new System.Drawing.Size(619, 294);
+            this.GVUser.Size = new System.Drawing.Size(719, 281);
             this.GVUser.TabIndex = 5;
             // 
             // ID
@@ -240,7 +245,7 @@
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
-            this.ID.Width = 50;
+            this.ID.Width = 160;
             // 
             // Email
             // 
@@ -272,14 +277,15 @@
             // 
             // UserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 581);
+            this.ClientSize = new System.Drawing.Size(1018, 502);
             this.Controls.Add(this.GVUser);
             this.Controls.Add(this.btnadduser);
             this.Controls.Add(this.searchtxt);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);
