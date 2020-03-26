@@ -37,14 +37,9 @@ namespace NoDesk
 			return users;
 		}
 		
-		public void insert(List<BaseModel> models)
+		public void insert(User user)
 		{
-			List<User> users = new List<User>();
-			foreach (User model in models)
-			{
-				users.Add(model);
-			}
-			Database.userCollectionObjs.InsertMany(users);
+			Database.userCollectionObjs.InsertOne(user);
 		}
 	}
 }

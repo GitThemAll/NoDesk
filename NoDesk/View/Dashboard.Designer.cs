@@ -380,6 +380,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.leftPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -40,7 +40,7 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.titlelbl = new System.Windows.Forms.Label();
             this.searchtxt = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnadduser = new System.Windows.Forms.Button();
             this.GVUser = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,6 +106,7 @@
             this.usermanageBTN.TabIndex = 3;
             this.usermanageBTN.Text = "User Management";
             this.usermanageBTN.UseVisualStyleBackColor = false;
+            this.usermanageBTN.Click += new System.EventHandler(this.usermanageBTN_Click);
             // 
             // incidentBTN
             // 
@@ -205,16 +206,18 @@
             this.searchtxt.Size = new System.Drawing.Size(196, 22);
             this.searchtxt.TabIndex = 3;
             this.searchtxt.Text = "Search by Email";
+            this.searchtxt.TextChanged += new System.EventHandler(this.searchtxt_TextChanged);
             // 
-            // button1
+            // btnadduser
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(815, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 40);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Add New User";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnadduser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnadduser.Location = new System.Drawing.Point(815, 132);
+            this.btnadduser.Name = "btnadduser";
+            this.btnadduser.Size = new System.Drawing.Size(142, 40);
+            this.btnadduser.TabIndex = 4;
+            this.btnadduser.Text = "Add New User";
+            this.btnadduser.UseVisualStyleBackColor = false;
+            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
             // 
             // GVUser
             // 
@@ -273,7 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 581);
             this.Controls.Add(this.GVUser);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnadduser);
             this.Controls.Add(this.searchtxt);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
@@ -307,7 +310,7 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label titlelbl;
         private System.Windows.Forms.TextBox searchtxt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnadduser;
         private System.Windows.Forms.DataGridView GVUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

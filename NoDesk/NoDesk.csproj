@@ -167,6 +167,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="View\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
