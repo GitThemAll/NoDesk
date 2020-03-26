@@ -107,7 +107,6 @@
             this.usermanageBTN.TabIndex = 3;
             this.usermanageBTN.Text = "User Management";
             this.usermanageBTN.UseVisualStyleBackColor = false;
-            this.usermanageBTN.Click += new System.EventHandler(this.usermanageBTN_Click);
             // 
             // incidentBTN
             // 
@@ -203,7 +202,7 @@
             // searchtxt
             // 
             this.searchtxt.Location = new System.Drawing.Point(288, 108);
-            this.searchtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchtxt.Margin = new System.Windows.Forms.Padding(2);
             this.searchtxt.Name = "searchtxt";
             this.searchtxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.searchtxt.Size = new System.Drawing.Size(148, 20);
@@ -215,7 +214,7 @@
             // 
             this.btnadduser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnadduser.Location = new System.Drawing.Point(869, 108);
-            this.btnadduser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnadduser.Margin = new System.Windows.Forms.Padding(2);
             this.btnadduser.Name = "btnadduser";
             this.btnadduser.Size = new System.Drawing.Size(106, 32);
             this.btnadduser.TabIndex = 4;
@@ -285,7 +284,7 @@
             this.Controls.Add(this.searchtxt);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);

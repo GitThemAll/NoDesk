@@ -63,11 +63,6 @@ namespace NoDesk.View
             }
         }
 
-        private void usermanageBTN_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnadduser_Click(object sender, EventArgs e)
         {
             AddUser addUser = new AddUser(this);
