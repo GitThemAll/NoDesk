@@ -66,7 +66,7 @@
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(261, 565);
+            this.leftPanel.Size = new System.Drawing.Size(247, 494);
             this.leftPanel.TabIndex = 0;
             // 
             // panel1
@@ -74,10 +74,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.copyLBL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 508);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 450);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 57);
+            this.panel1.Size = new System.Drawing.Size(247, 44);
             this.panel1.TabIndex = 4;
             // 
             // copyLBL
@@ -85,9 +85,10 @@
             this.copyLBL.AutoSize = true;
             this.copyLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyLBL.ForeColor = System.Drawing.Color.White;
-            this.copyLBL.Location = new System.Drawing.Point(14, 18);
+            this.copyLBL.Location = new System.Drawing.Point(10, 14);
+            this.copyLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.copyLBL.Name = "copyLBL";
-            this.copyLBL.Size = new System.Drawing.Size(183, 29);
+            this.copyLBL.Size = new System.Drawing.Size(142, 24);
             this.copyLBL.TabIndex = 0;
             this.copyLBL.Text = "© 2020 Group 1";
             // 
@@ -98,10 +99,10 @@
             this.usermanageBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usermanageBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usermanageBTN.ForeColor = System.Drawing.Color.White;
-            this.usermanageBTN.Location = new System.Drawing.Point(0, 261);
-            this.usermanageBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.usermanageBTN.Location = new System.Drawing.Point(0, 200);
+            this.usermanageBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usermanageBTN.Name = "usermanageBTN";
-            this.usermanageBTN.Size = new System.Drawing.Size(261, 82);
+            this.usermanageBTN.Size = new System.Drawing.Size(247, 63);
             this.usermanageBTN.TabIndex = 3;
             this.usermanageBTN.Text = "User Management";
             this.usermanageBTN.UseVisualStyleBackColor = true;
@@ -114,10 +115,10 @@
             this.incidentBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.incidentBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incidentBTN.ForeColor = System.Drawing.Color.White;
-            this.incidentBTN.Location = new System.Drawing.Point(0, 179);
-            this.incidentBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.incidentBTN.Location = new System.Drawing.Point(0, 137);
+            this.incidentBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.incidentBTN.Name = "incidentBTN";
-            this.incidentBTN.Size = new System.Drawing.Size(261, 82);
+            this.incidentBTN.Size = new System.Drawing.Size(247, 63);
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
             this.incidentBTN.UseVisualStyleBackColor = true;
@@ -130,10 +131,10 @@
             this.dashboardBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dashboardBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardBTN.ForeColor = System.Drawing.Color.White;
-            this.dashboardBTN.Location = new System.Drawing.Point(0, 97);
-            this.dashboardBTN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dashboardBTN.Location = new System.Drawing.Point(0, 74);
+            this.dashboardBTN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dashboardBTN.Name = "dashboardBTN";
-            this.dashboardBTN.Size = new System.Drawing.Size(261, 82);
+            this.dashboardBTN.Size = new System.Drawing.Size(247, 63);
             this.dashboardBTN.TabIndex = 1;
             this.dashboardBTN.Text = "Dashboard";
             this.dashboardBTN.UseVisualStyleBackColor = false;
@@ -147,7 +148,7 @@
             this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.topLeftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topLeftPanel.Name = "topLeftPanel";
-            this.topLeftPanel.Size = new System.Drawing.Size(261, 97);
+            this.topLeftPanel.Size = new System.Drawing.Size(247, 74);
             this.topLeftPanel.TabIndex = 0;
             // 
             // servicedeskLBL
@@ -155,10 +156,10 @@
             this.servicedeskLBL.AutoSize = true;
             this.servicedeskLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.servicedeskLBL.ForeColor = System.Drawing.Color.White;
-            this.servicedeskLBL.Location = new System.Drawing.Point(63, 55);
+            this.servicedeskLBL.Location = new System.Drawing.Point(47, 42);
             this.servicedeskLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.servicedeskLBL.Name = "servicedeskLBL";
-            this.servicedeskLBL.Size = new System.Drawing.Size(175, 31);
+            this.servicedeskLBL.Size = new System.Drawing.Size(139, 25);
             this.servicedeskLBL.TabIndex = 1;
             this.servicedeskLBL.Text = "Service Desk";
             // 
@@ -167,10 +168,10 @@
             this.gardengroupLBL.AutoSize = true;
             this.gardengroupLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gardengroupLBL.ForeColor = System.Drawing.Color.White;
-            this.gardengroupLBL.Location = new System.Drawing.Point(21, 20);
+            this.gardengroupLBL.Location = new System.Drawing.Point(16, 15);
             this.gardengroupLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gardengroupLBL.Name = "gardengroupLBL";
-            this.gardengroupLBL.Size = new System.Drawing.Size(280, 42);
+            this.gardengroupLBL.Size = new System.Drawing.Size(222, 33);
             this.gardengroupLBL.TabIndex = 0;
             this.gardengroupLBL.Text = "Garden Group ";
             // 
@@ -179,10 +180,10 @@
             this.topPanel.BackColor = System.Drawing.Color.White;
             this.topPanel.Controls.Add(this.dashboardLBL);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(261, 0);
+            this.topPanel.Location = new System.Drawing.Point(247, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(801, 97);
+            this.topPanel.Size = new System.Drawing.Size(806, 74);
             this.topPanel.TabIndex = 1;
             // 
             // dashboardLBL
@@ -190,9 +191,10 @@
             this.dashboardLBL.AutoSize = true;
             this.dashboardLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.dashboardLBL.Location = new System.Drawing.Point(41, 31);
+            this.dashboardLBL.Location = new System.Drawing.Point(31, 24);
+            this.dashboardLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dashboardLBL.Name = "dashboardLBL";
-            this.dashboardLBL.Size = new System.Drawing.Size(215, 46);
+            this.dashboardLBL.Size = new System.Drawing.Size(175, 37);
             this.dashboardLBL.TabIndex = 0;
             this.dashboardLBL.Text = "Dashboard";
             // 
@@ -201,12 +203,13 @@
             this.UnResolvedIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.UnResolvedIncidentsProgressBar.AnimationSpeed = 500;
             this.UnResolvedIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
-            this.UnResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UnResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UnResolvedIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UnResolvedIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UnResolvedIncidentsProgressBar.InnerMargin = 2;
             this.UnResolvedIncidentsProgressBar.InnerWidth = -1;
-            this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(551, 227);
+            this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(548, 211);
+            this.UnResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UnResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.UnResolvedIncidentsProgressBar.Name = "UnResolvedIncidentsProgressBar";
             this.UnResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -215,7 +218,7 @@
             this.UnResolvedIncidentsProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
             this.UnResolvedIncidentsProgressBar.ProgressWidth = 15;
             this.UnResolvedIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnResolvedIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+            this.UnResolvedIncidentsProgressBar.Size = new System.Drawing.Size(190, 188);
             this.UnResolvedIncidentsProgressBar.StartAngle = 270;
             this.UnResolvedIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.UnResolvedIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -233,9 +236,10 @@
             this.unresolvedLBL.AutoSize = true;
             this.unresolvedLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
             this.unresolvedLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.unresolvedLBL.Location = new System.Drawing.Point(531, 132);
+            this.unresolvedLBL.Location = new System.Drawing.Point(539, 138);
+            this.unresolvedLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unresolvedLBL.Name = "unresolvedLBL";
-            this.unresolvedLBL.Size = new System.Drawing.Size(258, 29);
+            this.unresolvedLBL.Size = new System.Drawing.Size(206, 24);
             this.unresolvedLBL.TabIndex = 3;
             this.unresolvedLBL.Text = "Unresolved Incidents";
             // 
@@ -244,9 +248,10 @@
             this.ticketsopenLBL.AutoSize = true;
             this.ticketsopenLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ticketsopenLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ticketsopenLBL.Location = new System.Drawing.Point(565, 179);
+            this.ticketsopenLBL.Location = new System.Drawing.Point(565, 174);
+            this.ticketsopenLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ticketsopenLBL.Name = "ticketsopenLBL";
-            this.ticketsopenLBL.Size = new System.Drawing.Size(178, 18);
+            this.ticketsopenLBL.Size = new System.Drawing.Size(145, 15);
             this.ticketsopenLBL.TabIndex = 4;
             this.ticketsopenLBL.Text = "All Tickets Currently Open";
             // 
@@ -255,12 +260,13 @@
             this.PastIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.PastIncidentsProgressBar.AnimationSpeed = 500;
             this.PastIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
-            this.PastIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PastIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PastIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PastIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PastIncidentsProgressBar.InnerMargin = 2;
             this.PastIncidentsProgressBar.InnerWidth = -1;
-            this.PastIncidentsProgressBar.Location = new System.Drawing.Point(812, 227);
+            this.PastIncidentsProgressBar.Location = new System.Drawing.Point(810, 211);
+            this.PastIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PastIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.PastIncidentsProgressBar.Name = "PastIncidentsProgressBar";
             this.PastIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -269,7 +275,7 @@
             this.PastIncidentsProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.PastIncidentsProgressBar.ProgressWidth = 15;
             this.PastIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PastIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+            this.PastIncidentsProgressBar.Size = new System.Drawing.Size(190, 188);
             this.PastIncidentsProgressBar.StartAngle = 270;
             this.PastIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.PastIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -287,9 +293,10 @@
             this.attentionLBL.AutoSize = true;
             this.attentionLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.attentionLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.attentionLBL.Location = new System.Drawing.Point(800, 179);
+            this.attentionLBL.Location = new System.Drawing.Point(801, 174);
+            this.attentionLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.attentionLBL.Name = "attentionLBL";
-            this.attentionLBL.Size = new System.Drawing.Size(273, 18);
+            this.attentionLBL.Size = new System.Drawing.Size(227, 15);
             this.attentionLBL.TabIndex = 7;
             this.attentionLBL.Text = "These Tickets Need Immediate Attention";
             // 
@@ -298,9 +305,10 @@
             this.deadlineLBL.AutoSize = true;
             this.deadlineLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
             this.deadlineLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.deadlineLBL.Location = new System.Drawing.Point(799, 132);
+            this.deadlineLBL.Location = new System.Drawing.Point(803, 138);
+            this.deadlineLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deadlineLBL.Name = "deadlineLBL";
-            this.deadlineLBL.Size = new System.Drawing.Size(288, 29);
+            this.deadlineLBL.Size = new System.Drawing.Size(228, 24);
             this.deadlineLBL.TabIndex = 6;
             this.deadlineLBL.Text = "Incidents Past Deadline";
             // 
@@ -309,9 +317,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(306, 179);
+            this.label1.Location = new System.Drawing.Point(288, 174);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 18);
+            this.label1.Size = new System.Drawing.Size(145, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "All Tickets Currently Open";
             // 
@@ -320,9 +329,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(289, 132);
+            this.label2.Location = new System.Drawing.Point(275, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 29);
+            this.label2.Size = new System.Drawing.Size(187, 24);
             this.label2.TabIndex = 9;
             this.label2.Text = "Resolved Incidents";
             // 
@@ -331,12 +341,13 @@
             this.ResolvedIncidentsProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.ResolvedIncidentsProgressBar.AnimationSpeed = 500;
             this.ResolvedIncidentsProgressBar.BackColor = System.Drawing.Color.Transparent;
-            this.ResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResolvedIncidentsProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResolvedIncidentsProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ResolvedIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ResolvedIncidentsProgressBar.InnerMargin = 2;
             this.ResolvedIncidentsProgressBar.InnerWidth = -1;
-            this.ResolvedIncidentsProgressBar.Location = new System.Drawing.Point(290, 227);
+            this.ResolvedIncidentsProgressBar.Location = new System.Drawing.Point(276, 211);
+            this.ResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.ResolvedIncidentsProgressBar.Name = "ResolvedIncidentsProgressBar";
             this.ResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -345,7 +356,7 @@
             this.ResolvedIncidentsProgressBar.ProgressColor = System.Drawing.Color.SeaGreen;
             this.ResolvedIncidentsProgressBar.ProgressWidth = 15;
             this.ResolvedIncidentsProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResolvedIncidentsProgressBar.Size = new System.Drawing.Size(186, 170);
+            this.ResolvedIncidentsProgressBar.Size = new System.Drawing.Size(190, 188);
             this.ResolvedIncidentsProgressBar.StartAngle = 270;
             this.ResolvedIncidentsProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.ResolvedIncidentsProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
@@ -360,10 +371,10 @@
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(1062, 565);
+            this.ClientSize = new System.Drawing.Size(1053, 494);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ResolvedIncidentsProgressBar);
