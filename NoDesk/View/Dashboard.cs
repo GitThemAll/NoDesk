@@ -40,5 +40,9 @@ namespace NoDesk
 
 		}
 
+		private void usermanageBTN_Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }
