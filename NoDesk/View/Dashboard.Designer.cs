@@ -208,7 +208,7 @@
             this.UnResolvedIncidentsProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UnResolvedIncidentsProgressBar.InnerMargin = 2;
             this.UnResolvedIncidentsProgressBar.InnerWidth = -1;
-            this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(548, 211);
+            this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(541, 211);
             this.UnResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UnResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.UnResolvedIncidentsProgressBar.Name = "UnResolvedIncidentsProgressBar";
@@ -236,7 +236,7 @@
             this.unresolvedLBL.AutoSize = true;
             this.unresolvedLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.75F, System.Drawing.FontStyle.Bold);
             this.unresolvedLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.unresolvedLBL.Location = new System.Drawing.Point(539, 138);
+            this.unresolvedLBL.Location = new System.Drawing.Point(532, 138);
             this.unresolvedLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unresolvedLBL.Name = "unresolvedLBL";
             this.unresolvedLBL.Size = new System.Drawing.Size(206, 24);
@@ -248,7 +248,7 @@
             this.ticketsopenLBL.AutoSize = true;
             this.ticketsopenLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ticketsopenLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.ticketsopenLBL.Location = new System.Drawing.Point(565, 174);
+            this.ticketsopenLBL.Location = new System.Drawing.Point(558, 174);
             this.ticketsopenLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ticketsopenLBL.Name = "ticketsopenLBL";
             this.ticketsopenLBL.Size = new System.Drawing.Size(145, 15);
