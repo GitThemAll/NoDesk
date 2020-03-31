@@ -13,26 +13,28 @@ namespace NoDesk
 {
 	class IncidentController
 	{
+		//todo make all methods async
 		DateTime dateToday = DateTime.Now;
-		private List<Incident> incidents;
+		private List<Incident> allincidents;
 		private List<Incident> pastIncidents;
 		private List<Incident> solvedIncidents;
 		private List<Incident> notSolvedIncidents;
 		public int solvedIncidentsPercentage
 		{
-			get { return solvedIncidents.Count * 100 / incidents.Count; }
+			get { return solvedIncidents.Count * 100 / allincidents.Count; }
 			private set { }
 		}
 		public int pastIncidentsPercentage
 		{
-			get { return pastIncidents.Count * 100 / incidents.Count; }
+			get { return pastIncidents.Count * 100 / allincidents.Count; }
 			private set { }
 		}
 		public int notSolvedIncidentsPercentage
 		{
-			get { return notSolvedIncidents.Count * 100 / incidents.Count;}
+			get { return notSolvedIncidents.Count * 100 / allincidents.Count;}
 			private set { }
 		}
+
 		public List<Incident> get(Expression<Func<Incident, bool>> filter)
 		{
 			List<Incident> incidents = Database.incidentCollectionObjs.Find(filter).ToList();
@@ -42,7 +44,7 @@ namespace NoDesk
 		public List<Incident> getAll()
 		{
 			List<Incident> incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
-			this.incidents = incidents;
+			this.allincidents = incidents;
 			return incidents;
 		}
 
@@ -52,43 +54,63 @@ namespace NoDesk
 			{
 				Database.incidentCollectionObjs.InsertMany(incidents);
 				return;
-
 			}
 			Incident incident = incidents[0];
 			Database.incidentCollectionObjs.InsertOne(incident);
 
 		}
 
-		internal List<Incident> getSolvedIncidents()
+		public  List<Incident> getSolvedIncidents()
 		{
-			if (this.incidents == null)
+			if (this.allincidents == null)
 			{
 				this.getAll();
 			}
 
-			this.solvedIncidents = this.incidents.FindAll(x => x.status == "Solved");
+			this.solvedIncidents = this.allincidents.FindAll(x => x.status == "Solved");
 			return this.solvedIncidents;
 		}
 
 		public List<Incident> getPastIncidents()
 		{
-			if (this.incidents == null)
+			if (this.allincidents == null)
 			{
 				this.getAll();
 			}
 
-			this.pastIncidents = this.incidents.FindAll(x => x.dueDate < dateToday);
+			this.pastIncidents = this.allincidents.FindAll(x => x.dueDate < dateToday);
 			return this.pastIncidents;
 		}
 		public List<Incident> getnotYetSolvedIncidents()
 		{
-			if (this.incidents == null)
+			if (this.allincidents == null)
 			{
 				this.getAll();
 			}
 
-			this.notSolvedIncidents = this.incidents.FindAll(x => x.status != "Solved");
+			this.notSolvedIncidents = this.allincidents.FindAll(x => x.status != "Solved");
 			return this.notSolvedIncidents;
+		}
+		public void updateMany(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)
+		{
+			var update = Builders<Incident>.Update.Set(set, newValue);
+			Database.incidentCollectionObjs.UpdateMany(filter, update);
+		}
+
+		public void updateOne(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)
+		{
+			var update = Builders<Incident>.Update.Set(set, newValue);
+			Database.incidentCollectionObjs.UpdateOne(filter, update);
+
+		}
+		public void deleteOne(Expression<Func<Incident, bool>> filter)
+		{
+			Database.incidentCollectionObjs.FindOneAndDelete(filter);
+
+		}
+		public void deleteMany(Expression<Func<Incident, bool>> filter)
+		{
+			Database.incidentCollectionObjs.DeleteMany(filter);
 		}
 	}
 }
