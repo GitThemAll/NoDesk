@@ -12,6 +12,21 @@ namespace NoDesk
 	public class Incident : BaseModel
 
 	{
+		public Incident(string subject, string user, string summary, DateTime dueDate)
+		{
+			this.subject = subject;
+			this.user = user;
+			this.summary = summary;
+			this.dueDate = dueDate;
+			this.date= DateTime.Now;
+			this.status = IncidentStatus.NotSolved;
+		}
+
+		public void assignUser(User employee)
+		{
+			this.assignedEmployee = user;
+		}
+
 		[BsonRepresentation(BsonType.ObjectId)]
 		public ObjectId id { get; set; }
 
@@ -26,7 +41,7 @@ namespace NoDesk
 		public DateTime date { get; set; }
 
 		[BsonElement("status")]
-		public string status { get; set; }
+		public IncidentStatus status { get; set; }
 
 		[BsonElement("summary")]
 		public string summary { get; set; }

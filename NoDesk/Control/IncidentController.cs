@@ -43,9 +43,13 @@ namespace NoDesk
 
 		public List<Incident> getAll()
 		{
-			List<Incident> incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
-			this.allincidents = incidents;
-			return incidents;
+			if (this.allincidents == null)
+			{
+				List<Incident> incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
+				this.allincidents = incidents;
+			}
+			
+			return this.allincidents;
 		}
 
 		public void insert(List<Incident> incidents)
@@ -67,7 +71,7 @@ namespace NoDesk
 				this.getAll();
 			}
 
-			this.solvedIncidents = this.allincidents.FindAll(x => x.status == "Solved");
+			this.solvedIncidents = this.allincidents.FindAll(x => x.status == IncidentStatus.Solved);
 			return this.solvedIncidents;
 		}
 
@@ -88,7 +92,7 @@ namespace NoDesk
 				this.getAll();
 			}
 
-			this.notSolvedIncidents = this.allincidents.FindAll(x => x.status != "Solved");
+			this.notSolvedIncidents = this.allincidents.FindAll(x => x.status != IncidentStatus.Solved);
 			return this.notSolvedIncidents;
 		}
 		public void updateMany(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)

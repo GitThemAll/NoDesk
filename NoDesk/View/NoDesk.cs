@@ -47,7 +47,7 @@ namespace NoDesk
 	        }
 	        catch (Exception exception)
 	        {
-		        DisplayError(exception);
+		        ErrorHandler.DisplayError(exception);
 	        }
 		}
 
@@ -56,30 +56,6 @@ namespace NoDesk
             this.Close();
         }
 
-		private void DisplayError(Exception error)
-		{
-			switch (error.Message)
-			{
-				case "emptyFields":
-					MessageBox.Show("Please fill the empty fields and try to sign in again", "Empty Fields",
-						MessageBoxButtons.OK, MessageBoxIcon.Error);
-					break;
-				case "emptyUsername":
-					MessageBox.Show("Please fill your username field in and try to sign in again", "Empty Username",
-						MessageBoxButtons.OK, MessageBoxIcon.Error);
-					break;
-				case "emptyPassword":
-					MessageBox.Show("Please fill your password in and try to sign in again", "Empty Password",
-						MessageBoxButtons.OK, MessageBoxIcon.Error);
-					break;
-				case "Unoath":
-					MessageBox.Show("Wrong email or password", "Unauthorized login",
-						MessageBoxButtons.OK, MessageBoxIcon.Error);
-					break;
-				default:
-					break;
-
-			}
-		}
+	
     }
 }
