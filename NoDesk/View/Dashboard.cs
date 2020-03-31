@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using NoDesk.View;
 
 namespace NoDesk
 {
@@ -19,10 +20,12 @@ namespace NoDesk
 	    private List<Incident> solvedIncidents;
 	    private List<Incident> notSolvedIncidents;
 	    private List<Incident> pastIncidents;
+		User user;
 
 		public Dashboard(User user)
 	    {
 		    InitializeComponent();
+			this.user = user;
 		    this.Text = string.Format("{0} {1} Dashboard", user.firstname, user.lastname);
 		    this.incidents = incidentController.getAll();
 		    this.pastIncidents = incidentController.getPastIncidents();
@@ -40,5 +43,16 @@ namespace NoDesk
 
 		}
 
+		private void usermanageBTN_Click(object sender, EventArgs e)
+		{
+			UserManagement userManagement = new UserManagement(user,this);
+			userManagement.Show();
+			this.Hide();
+		}
+
+		private void Dashboard_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

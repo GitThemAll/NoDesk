@@ -28,22 +28,23 @@ namespace NoDesk
 			return this.allUsers;
 		}
 
-		public void insert(List<User> users)
+		public void insertOverload(List<User> users)
 		{
 			if (users.Count > 1)
 			{
 				Database.userCollectionObjs.InsertMany(users);
 				return;
-
 			}
 			User user = users[0];
 			Database.userCollectionObjs.InsertOne(user);
 		}
+    
 		public void updateMany(Expression<Func<User, bool>> filter, Expression<Func<User, string>> set, string newValue)
 		{
 			var update = Builders<User>.Update.Set(set, newValue);
 			Database.userCollectionObjs.UpdateMany(filter, update);
 		}
+
 
 		public void updateOne(Expression<Func<User, bool>> filter, Expression<Func<User, string>> set, string newValue)
 		{
@@ -54,11 +55,16 @@ namespace NoDesk
 		public void deleteOne(Expression<Func<User, bool>> filter)
 		{
 			Database.userCollectionObjs.FindOneAndDelete(filter);
-
 		}
 		public void deleteMany(Expression<Func<User, bool>> filter)
 		{
 			Database.userCollectionObjs.DeleteMany(filter);  
+    }
+		
+		public void insert(User user)
+		{
+			Database.userCollectionObjs.InsertOne(user);
 		}
+    
 	}
 }
