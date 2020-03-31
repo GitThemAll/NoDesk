@@ -26,16 +26,10 @@ namespace NoDesk.View
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            User user = new User()
-            {
-                email = txtemail.Text,
-                firstname = txtfirstname.Text,
-                lastname = txtlastname.Text,
-                password = txtpassword.Text
-            
-            };
+            User user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
             userController.insert(user);
             userManagement.RefreshGV();
+            userManagement.addUserForm = null;
             this.Close();
         }
 

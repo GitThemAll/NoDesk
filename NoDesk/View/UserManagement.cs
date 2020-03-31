@@ -18,6 +18,7 @@ namespace NoDesk.View
         User user;
         Dashboard dashboard;
         UserController userController = new UserController();
+        internal AddUser addUserForm { get; set; }
 
         public UserManagement(User user, Dashboard dashboard)
         {
@@ -65,8 +66,14 @@ namespace NoDesk.View
 
         private void btnadduser_Click(object sender, EventArgs e)
         {
-            AddUser addUser = new AddUser(this);
-            addUser.Show();
+	        if (this.addUserForm == null)
+	        {
+		        this.addUserForm = new AddUser(this);
+		        addUserForm.Show();
+            }
+            this.addUserForm.BringToFront();
+            
+
         }
         public void RefreshGV()
         {

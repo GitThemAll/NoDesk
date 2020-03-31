@@ -38,7 +38,6 @@
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.logo = new System.Windows.Forms.PictureBox();
-			this.close_btn = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -160,26 +159,12 @@
 			this.logo.TabIndex = 0;
 			this.logo.TabStop = false;
 			// 
-			// close_btn
-			// 
-			this.close_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.close_btn.ForeColor = System.Drawing.Color.Red;
-			this.close_btn.Location = new System.Drawing.Point(350, 10);
-			this.close_btn.Margin = new System.Windows.Forms.Padding(2);
-			this.close_btn.Name = "close_btn";
-			this.close_btn.Size = new System.Drawing.Size(22, 24);
-			this.close_btn.TabIndex = 11;
-			this.close_btn.Text = "X";
-			this.close_btn.UseVisualStyleBackColor = true;
-			this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
-			// 
 			// NoDesk
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.DarkGray;
 			this.ClientSize = new System.Drawing.Size(380, 582);
-			this.Controls.Add(this.close_btn);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.login_btn);
@@ -191,7 +176,7 @@
 			this.Controls.Add(this.username);
 			this.Controls.Add(this.logo);
 			this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "NoDesk";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -217,7 +202,6 @@
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button close_btn;
     }
 }
 

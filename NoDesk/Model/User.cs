@@ -12,6 +12,14 @@ namespace NoDesk
 	[BsonIgnoreExtraElements]
 	public class User : BaseModel 
 	{
+		public User(string firstname, string lastname, string email, string password)
+		{
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.email = email;
+			this.password = password;
+		}
+
 		[BsonRepresentation(BsonType.ObjectId)]
 		public ObjectId id { get; set; }
 
