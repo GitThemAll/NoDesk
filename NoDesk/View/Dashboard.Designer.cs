@@ -122,6 +122,7 @@
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
             this.incidentBTN.UseVisualStyleBackColor = true;
+            this.incidentBTN.Click += new System.EventHandler(this.incidentBTN_Click);
             // 
             // dashboardBTN
             // 
@@ -168,7 +169,7 @@
             this.gardengroupLBL.AutoSize = true;
             this.gardengroupLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gardengroupLBL.ForeColor = System.Drawing.Color.White;
-            this.gardengroupLBL.Location = new System.Drawing.Point(16, 15);
+            this.gardengroupLBL.Location = new System.Drawing.Point(-7, 0);
             this.gardengroupLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gardengroupLBL.Name = "gardengroupLBL";
             this.gardengroupLBL.Size = new System.Drawing.Size(280, 42);

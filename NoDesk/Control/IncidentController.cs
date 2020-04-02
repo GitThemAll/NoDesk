@@ -11,7 +11,7 @@ using MongoDB.Driver;
 
 namespace NoDesk
 {
-	class IncidentController
+	public class IncidentController
 	{
 		//todo make all methods async
 		DateTime dateToday = DateTime.Now;
@@ -37,6 +37,7 @@ namespace NoDesk
 
 		public List<Incident> get(Expression<Func<Incident, bool>> filter)
 		{
+			
 			List<Incident> incidents = Database.incidentCollectionObjs.Find(filter).ToList();
 			return incidents;
 		}
@@ -54,14 +55,13 @@ namespace NoDesk
 
 		public void insert(List<Incident> incidents)
 		{
-			if (incidents.Count > 1)
-			{
-				Database.incidentCollectionObjs.InsertMany(incidents);
-				return;
-			}
-			Incident incident = incidents[0];
-			Database.incidentCollectionObjs.InsertOne(incident);
+			
+			Database.incidentCollectionObjs.InsertMany(incidents);
 
+		}
+		public void insert(Incident incident)
+		{
+			Database.incidentCollectionObjs.InsertOne(incident);
 		}
 
 		public  List<Incident> getSolvedIncidents()

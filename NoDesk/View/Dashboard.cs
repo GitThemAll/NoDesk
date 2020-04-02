@@ -59,5 +59,12 @@ namespace NoDesk
 		{
 			Application.Exit();
 		}
+
+		private void incidentBTN_Click(object sender, EventArgs e)
+		{
+			IncidentManagement incidentManagement = new IncidentManagement(user, this);
+			incidentManagement.Show();
+			this.Hide();
+		}
 	}
 }

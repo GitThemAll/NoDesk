@@ -1,6 +1,6 @@
 ﻿namespace NoDesk.View
 {
-    partial class UserManagement
+    partial class IncidentManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -40,18 +40,22 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.titlelbl = new System.Windows.Forms.Label();
             this.searchtxt = new System.Windows.Forms.TextBox();
-            this.btnadduser = new System.Windows.Forms.Button();
-            this.GVUser = new System.Windows.Forms.DataGridView();
+            this.btnAddIncident = new System.Windows.Forms.Button();
+            this.GVIncident = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketsid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.user = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_editIncident = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topLeftPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GVUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVIncident)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -93,7 +97,7 @@
             // 
             // usermanageBTN
             // 
-            this.usermanageBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.usermanageBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.usermanageBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.usermanageBTN.FlatAppearance.BorderSize = 0;
             this.usermanageBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,9 +110,11 @@
             this.usermanageBTN.TabIndex = 3;
             this.usermanageBTN.Text = "User Management";
             this.usermanageBTN.UseVisualStyleBackColor = false;
+            this.usermanageBTN.Click += new System.EventHandler(this.usermanageBTN_Click);
             // 
             // incidentBTN
             // 
+            this.incidentBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.incidentBTN.Dock = System.Windows.Forms.DockStyle.Top;
             this.incidentBTN.FlatAppearance.BorderSize = 0;
             this.incidentBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,7 +126,7 @@
             this.incidentBTN.Size = new System.Drawing.Size(333, 82);
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
-            this.incidentBTN.UseVisualStyleBackColor = true;
+            this.incidentBTN.UseVisualStyleBackColor = false;
             // 
             // dashboardBTN
             // 
@@ -191,9 +197,9 @@
             this.titlelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.titlelbl.Location = new System.Drawing.Point(41, 31);
             this.titlelbl.Name = "titlelbl";
-            this.titlelbl.Size = new System.Drawing.Size(346, 46);
+            this.titlelbl.Size = new System.Drawing.Size(401, 46);
             this.titlelbl.TabIndex = 0;
-            this.titlelbl.Text = "User Management";
+            this.titlelbl.Text = "Incident Management";
             // 
             // searchtxt
             // 
@@ -203,88 +209,136 @@
             this.searchtxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.searchtxt.Size = new System.Drawing.Size(196, 22);
             this.searchtxt.TabIndex = 3;
-            this.searchtxt.Text = "Search by Email";
+            this.searchtxt.Text = "Search by ID";
             this.searchtxt.TextChanged += new System.EventHandler(this.searchtxt_TextChanged);
             // 
-            // btnadduser
+            // btnAddIncident
             // 
-            this.btnadduser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnadduser.Location = new System.Drawing.Point(1159, 133);
-            this.btnadduser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnadduser.Name = "btnadduser";
-            this.btnadduser.Size = new System.Drawing.Size(141, 39);
-            this.btnadduser.TabIndex = 4;
-            this.btnadduser.Text = "Add New User";
-            this.btnadduser.UseVisualStyleBackColor = false;
-            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
+            this.btnAddIncident.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddIncident.Location = new System.Drawing.Point(1159, 133);
+            this.btnAddIncident.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddIncident.Name = "btnAddIncident";
+            this.btnAddIncident.Size = new System.Drawing.Size(141, 39);
+            this.btnAddIncident.TabIndex = 4;
+            this.btnAddIncident.Text = "Add New Incident";
+            this.btnAddIncident.UseVisualStyleBackColor = false;
+            this.btnAddIncident.Click += new System.EventHandler(this.btnAddIncident_Click);
             // 
-            // GVUser
+            // GVIncident
             // 
-            this.GVUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GVUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GVIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GVIncident.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Email,
-            this.FirstName,
-            this.LastName,
-            this.ticketsid});
-            this.GVUser.Location = new System.Drawing.Point(384, 180);
-            this.GVUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.GVUser.Name = "GVUser";
-            this.GVUser.RowHeadersWidth = 51;
-            this.GVUser.RowTemplate.Height = 24;
-            this.GVUser.Size = new System.Drawing.Size(959, 346);
-            this.GVUser.TabIndex = 5;
+            this.user,
+            this.Subject,
+            this.date,
+            this.status,
+            this.summary,
+            this.employee,
+            this.dueDate});
+            this.GVIncident.Location = new System.Drawing.Point(370, 209);
+            this.GVIncident.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GVIncident.Name = "GVIncident";
+            this.GVIncident.RowHeadersWidth = 51;
+            this.GVIncident.RowTemplate.Height = 24;
+            this.GVIncident.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GVIncident.Size = new System.Drawing.Size(959, 346);
+            this.GVIncident.TabIndex = 5;
+            this.GVIncident.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GVIncident_CellContentClick);
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 160;
             // 
-            // Email
+            // user
             // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.Width = 125;
+            this.user.HeaderText = "User";
+            this.user.MinimumWidth = 6;
+            this.user.Name = "user";
+            this.user.ReadOnly = true;
+            this.user.Width = 125;
             // 
-            // FirstName
+            // Subject
             // 
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.MinimumWidth = 6;
-            this.FirstName.Name = "FirstName";
-            this.FirstName.Width = 125;
+            this.Subject.HeaderText = "Subject";
+            this.Subject.MinimumWidth = 6;
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            this.Subject.Width = 125;
             // 
-            // LastName
+            // date
             // 
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.MinimumWidth = 6;
-            this.LastName.Name = "LastName";
-            this.LastName.Width = 125;
+            this.date.HeaderText = "Date";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 125;
             // 
-            // ticketsid
+            // status
             // 
-            this.ticketsid.HeaderText = "#Tickets";
-            this.ticketsid.MinimumWidth = 6;
-            this.ticketsid.Name = "ticketsid";
-            this.ticketsid.Width = 125;
+            this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.Width = 125;
             // 
-            // UserManagement
+            // summary
+            // 
+            this.summary.HeaderText = "Summary";
+            this.summary.MinimumWidth = 6;
+            this.summary.Name = "summary";
+            this.summary.ReadOnly = true;
+            this.summary.Width = 125;
+            // 
+            // employee
+            // 
+            this.employee.HeaderText = "Assigned Employee";
+            this.employee.MinimumWidth = 6;
+            this.employee.Name = "employee";
+            this.employee.ReadOnly = true;
+            this.employee.Width = 125;
+            // 
+            // dueDate
+            // 
+            this.dueDate.HeaderText = "Due Date";
+            this.dueDate.MinimumWidth = 6;
+            this.dueDate.Name = "dueDate";
+            this.dueDate.ReadOnly = true;
+            this.dueDate.Width = 125;
+            // 
+            // btn_editIncident
+            // 
+            this.btn_editIncident.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_editIncident.Enabled = false;
+            this.btn_editIncident.Location = new System.Drawing.Point(976, 133);
+            this.btn_editIncident.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_editIncident.Name = "btn_editIncident";
+            this.btn_editIncident.Size = new System.Drawing.Size(141, 39);
+            this.btn_editIncident.TabIndex = 6;
+            this.btn_editIncident.Text = "Edit Incident";
+            this.btn_editIncident.UseVisualStyleBackColor = false;
+            this.btn_editIncident.Click += new System.EventHandler(this.editIncident_Click);
+            // 
+            // IncidentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1357, 618);
-            this.Controls.Add(this.GVUser);
-            this.Controls.Add(this.btnadduser);
+            this.Controls.Add(this.btn_editIncident);
+            this.Controls.Add(this.GVIncident);
+            this.Controls.Add(this.btnAddIncident);
             this.Controls.Add(this.searchtxt);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "UserManagement";
+            this.Name = "IncidentManagement";
             this.Text = "UserManagement";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserManagement_FormClosing);
-            this.Load += new System.EventHandler(this.UserManagement_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IncidentManagement_FormClosing);
+            this.Load += new System.EventHandler(this.IncidentManagement_Load);
             this.leftPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -292,7 +346,7 @@
             this.topLeftPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GVUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVIncident)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,12 +366,17 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label titlelbl;
         private System.Windows.Forms.TextBox searchtxt;
-        private System.Windows.Forms.Button btnadduser;
-        private System.Windows.Forms.DataGridView GVUser;
+        private System.Windows.Forms.Button btnAddIncident;
+        private System.Windows.Forms.DataGridView GVIncident;
+        private System.Windows.Forms.Button btn_editIncident;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ticketsid;
+ //       private System.Windows.Forms.DataGridViewTextBoxColumn incident;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summary;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user;
     }
 }
