@@ -50,11 +50,13 @@ namespace NoDesk.View
                 return;
             }
             DateTime due = DateTime.Parse(inpt_incident_dueDate.Text);
-            this.incidentController.insert(new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due, this.assignedEmployee));
+            this.incidentController.insert(new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due, 
+	            inpt_incident_assignedEmployee.SelectedItem.ToString() == "Not assigned" ? null : (User)inpt_incident_assignedEmployee.SelectedItem));
             this.incidentmanagment.BringToFront();
             this.incidentmanagment.RefreshGV();
             MailerController mailer = new MailerController(inpt_incident_email.Text);
-            mailer.sendMail(inpt_incident_email.Text,new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due, this.assignedEmployee));
+            mailer.sendMail(inpt_incident_email.Text,new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due,
+	            inpt_incident_assignedEmployee.SelectedItem.ToString() == "Not assigned" ? null : (User)inpt_incident_assignedEmployee.SelectedItem));
             this.Close();
         }
 
@@ -63,42 +65,48 @@ namespace NoDesk.View
 
 		private void AddIncident_Load(object sender, EventArgs e)
 		{
-			inpt_incident_user.Text = this.incident.user;
-			inpt_incident_summary.Text = this.incident.summary;
-			inpt_incident_subject.Text = this.incident.subject;
-			inpt_incident_dueDate.Value = this.incident.dueDate;
 			inpt_incident_assignedEmployee.Items.Insert(0, "Not assigned");
-
 			int count = 1;
 			foreach (var item in this.userController.employees)
 			{
 				inpt_incident_assignedEmployee.Items.Insert(count, item);
 				count++;
 			}
-			if (this.incident.assignedEmployee == null)
+			if (this.incident!=null)
 			{
-				inpt_incident_assignedEmployee.SelectedItem = 0;
-				inpt_incident_assignedEmployee.SelectedIndex = 0;
-			}
-			else
-			{
-				inpt_incident_assignedEmployee.SelectedItem =
-					inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
-				inpt_incident_assignedEmployee.SelectedIndex = inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
-			}
+				inpt_incident_user.Text = this.incident.user;
+				inpt_incident_summary.Text = this.incident.summary;
+				inpt_incident_subject.Text = this.incident.subject;
+				inpt_incident_dueDate.Value = this.incident.dueDate;
+				
+				if (this.incident.assignedEmployee == null)
+				{
+					inpt_incident_assignedEmployee.SelectedItem = 0;
+					inpt_incident_assignedEmployee.SelectedIndex = 0;
+				}
+				else
+				{
+					inpt_incident_assignedEmployee.SelectedItem =
+						inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
+					inpt_incident_assignedEmployee.SelectedIndex = inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
+				}
 
+				return;
+			}
+			inpt_incident_assignedEmployee.SelectedItem = 0;
+			inpt_incident_assignedEmployee.SelectedIndex = 0;
 		}
 
 
 
 		private void inpt_incident_assignedEmployee_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			if (inpt_incident_assignedEmployee.SelectedItem == "Not assigned")
-			{
-				this.incident.assignedEmployee=null;
-				return;
-			}
-			this.incident.assignedEmployee = (User)inpt_incident_assignedEmployee.SelectedItem;
+			//if (inpt_incident_assignedEmployee.SelectedItem == "Not assigned")
+			//{
+			//	this.incident.assignedEmployee=null;
+			//	return;
+			//}
+			//this.incident.assignedEmployee = (User)inpt_incident_assignedEmployee.SelectedItem;
 		}
 
 		private void btn_editIncident_Click(object sender, EventArgs e)
