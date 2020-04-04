@@ -44,13 +44,8 @@ namespace NoDesk
 
 		public List<Incident> getAll()
 		{
-			if (this.allincidents == null)
-			{
-				List<Incident> incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
-				this.allincidents = incidents;
-			}
-			
-			return this.allincidents;
+			this.allincidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
+			return Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
 		}
 
 		public void insert(List<Incident> incidents)
