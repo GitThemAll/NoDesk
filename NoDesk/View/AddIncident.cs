@@ -31,7 +31,7 @@ namespace NoDesk.View
 		{
 			InitializeComponent();
 			this.incidentController = incidentController;
-			this.incidentManagement = incidentManagement;
+			this.incidentmanagment = incidentManagement;
 			this.incident = incident;
 			this.Text = "Edit incident";
 			this.btn_addIncident.Enabled = false;
@@ -103,6 +103,8 @@ namespace NoDesk.View
 			this.incident.summary = inpt_incident_summary.Text;
 			this.incident.assignedEmployee = inpt_incident_assignedEmployee.SelectedItem.ToString()== "Not assigned" ? null : (User)inpt_incident_assignedEmployee.SelectedItem;
 			this.incidentController.replace((x => x.id == this.incident.id), this.incident);
+			this.incidentmanagment.BringToFront();
+			this.incidentmanagment.RefreshGV();
 			this.Close();
 		}
 	}
