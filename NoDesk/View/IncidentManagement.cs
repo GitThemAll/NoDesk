@@ -17,6 +17,7 @@ namespace NoDesk.View
 {
     public partial class IncidentManagement : Form
     {
+	    private Incident selctedIncident { get; set; }
         User incidentUser;
         Dashboard dashboard;
         IncidentController incidentController = new IncidentController();
@@ -57,20 +58,6 @@ namespace NoDesk.View
                 GVIncident.Rows.Add(incident.id, incident.user, incident.subject, incident.date, incident.status, incident.summary, incident.assignedEmployee, incident.dueDate);
             }
         }
-
-       
-
-        //private void btnadduser_Click(object sender, EventArgs e)
-        //{
-	       // if (this.addUserForm == null)
-	       // {
-		      //  this.addUserForm = new AddUser(this);
-		      //  addUserForm.Show();
-        //    }
-        //    this.addUserForm.BringToFront();
-            
-
-        //}
         public void RefreshGV()
         {
             GVIncident.Rows.Clear();
@@ -121,22 +108,25 @@ namespace NoDesk.View
 
         private void editIncident_Click(object sender, EventArgs e)
         {
-
-
-            AddIncident addIncident = new AddIncident(this,this.incidentController,this.incidentDictionary);
+            AddIncident addIncident = new AddIncident(this,this.incidentController,this.selctedIncident);
             addIncident.ShowDialog();
         }
 
         private void GVIncident_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.incidentDictionary = new Dictionary<string, string>();
-            this.incidentDictionary.Add("id", GVIncident.SelectedRows[0].Cells[0].Value.ToString());
-            this.incidentDictionary.Add("subject", GVIncident.SelectedRows[0].Cells[2].Value.ToString());
-            this.incidentDictionary.Add("summary", GVIncident.SelectedRows[0].Cells[5].Value.ToString());
-            this.incidentDictionary.Add("assignedEmployee", GVIncident.SelectedRows[0].Cells[6].Value==null? "": GVIncident.SelectedRows[0].Cells[6].Value.ToString());
-            this.incidentDictionary.Add("dueDate", GVIncident.SelectedRows[0].Cells[7].Value.ToString());
-            this.incidentDictionary.Add("user", GVIncident.SelectedRows[0].Cells[1].Value.ToString());
+            this.selctedIncident= new Incident(GVIncident.SelectedRows[0].Cells[0].Value.ToString(),
+            GVIncident.SelectedRows[0].Cells[2].Value.ToString(),
+	            GVIncident.SelectedRows[0].Cells[1].Value.ToString(),
+	            GVIncident.SelectedRows[0].Cells[5].Value.ToString(), 
+	            DateTime.Parse(GVIncident.SelectedRows[0].Cells[7].Value.ToString()),
+	            (User)GVIncident.SelectedRows[0].Cells[6].Value ,
+                DateTime.Parse(GVIncident.SelectedRows[0].Cells[3].Value.ToString()),
+                (IncidentStatus)Enum.Parse(typeof(IncidentStatus), GVIncident.SelectedRows[0].Cells[4].Value.ToString())
+
+	            );
             btn_editIncident.Enabled= true;
         }
+
+        
     }
 }

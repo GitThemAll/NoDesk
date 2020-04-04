@@ -34,6 +34,18 @@ namespace NoDesk
 			this.assignedEmployee = assignedEmployee;
 		}
 
+		public Incident(string id, string subject, string user, string summary, DateTime dueDate, User assignedEmployee, DateTime incidentDate, IncidentStatus status)
+		{
+			this.id =ObjectId.Parse(id);
+			this.subject = subject;
+			this.user = user;
+			this.summary = summary;
+			this.dueDate = dueDate;
+			this.date = incidentDate;
+			this.status = status;
+			this.assignedEmployee = assignedEmployee;
+		}
+
 		public void assignUser(User employee)
 		{
 			this.assignedEmployee = employee;

@@ -96,6 +96,11 @@ namespace NoDesk
 			Database.incidentCollectionObjs.UpdateMany(filter, update);
 		}
 
+		public void replace(Expression<Func<Incident, bool>> filter, Incident newValue)
+		{
+			Database.incidentCollectionObjs.ReplaceOne(filter, newValue);
+
+		}
 		public void updateOne(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)
 		{
 			var update = Builders<Incident>.Update.Set(set, newValue);
