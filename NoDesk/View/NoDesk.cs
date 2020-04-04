@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +35,7 @@ namespace NoDesk
                 User user = userlist.Count > 0 ? userlist[0] : null;
 
 
+
                 if (user == null)
                 {
                     throw new Exception("Unoath");
@@ -51,7 +52,7 @@ namespace NoDesk
                 ErrorHandler.DisplayError(exception);
             }
         }
-
+	     
         private void close_btn_Click(object sender, EventArgs e)
         {
             this.Close();
