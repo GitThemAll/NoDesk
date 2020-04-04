@@ -59,21 +59,7 @@ namespace NoDesk.View
         }
 
 
-		private void btn_addIncident_Click(object sender, EventArgs e)
-		{
-			if (string.IsNullOrEmpty(inpt_incident_dueDate.Text) || string.IsNullOrEmpty(inpt_incident_summary.Text) ||
-				string.IsNullOrEmpty(inpt_incident_subject.Text) || string.IsNullOrEmpty(inpt_incident_user.Text))
-			{
-				ErrorHandler.DisplayError(new Exception("emptyFields"));
-				return;
-			}
-			DateTime due = DateTime.Parse(inpt_incident_dueDate.Text);
-			this.incidentController.insert(new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text,
-				due, this.assignedEmployee));
-			this.incidentmanagment.BringToFront();
-			this.incidentmanagment.RefreshGV();
-			this.Close();
-		}
+		
 
 		private void AddIncident_Load(object sender, EventArgs e)
 		{
