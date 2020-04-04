@@ -45,6 +45,9 @@
     <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.2.0\lib\net471\DnsClient.dll</HintPath>
     </Reference>
+    <Reference Include="EASendMail, Version=7.6.0.2, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.6.0.2\lib\net461\EASendMail.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeAnalysis, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.Common.3.6.0-1.final\lib\netstandard2.0\Microsoft.CodeAnalysis.dll</HintPath>
     </Reference>
@@ -157,6 +160,7 @@
   <ItemGroup>
     <Compile Include="Control\helpers\ErrorHandler.cs" />
     <Compile Include="Control\IncidentController.cs" />
+    <Compile Include="Control\MailerController.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\Incident.cs" />
     <Compile Include="Model\Types\IncidentStatus.cs" />
