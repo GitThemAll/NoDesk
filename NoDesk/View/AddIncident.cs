@@ -97,7 +97,6 @@ namespace NoDesk.View
 
         private void btn_editIncident_Click(object sender, EventArgs e)
         {
-            this.incidentController.updateOne((x=> x.id.ToString() == this.incidentDictionary["id"]),);
         }
     }
 }
