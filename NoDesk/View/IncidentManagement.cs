@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Windows.UI.Xaml.Controls;
+
 
 
 namespace NoDesk.View
@@ -28,6 +30,7 @@ namespace NoDesk.View
             this.incidentUser = user;
             this.dashboard = dashboard;
             this.userManagement = userManagement;
+            
         }
 
         public IncidentManagement(User user, Dashboard dashboard)
@@ -130,7 +133,7 @@ namespace NoDesk.View
             this.incidentDictionary.Add("id", GVIncident.SelectedRows[0].Cells[0].Value.ToString());
             this.incidentDictionary.Add("subject", GVIncident.SelectedRows[0].Cells[2].Value.ToString());
             this.incidentDictionary.Add("summary", GVIncident.SelectedRows[0].Cells[5].Value.ToString());
-            this.incidentDictionary.Add("assignedEmployee", GVIncident.SelectedRows[0].Cells[6].Value.ToString());
+            this.incidentDictionary.Add("assignedEmployee", GVIncident.SelectedRows[0].Cells[6].Value==null? "": GVIncident.SelectedRows[0].Cells[6].Value.ToString());
             this.incidentDictionary.Add("dueDate", GVIncident.SelectedRows[0].Cells[7].Value.ToString());
             this.incidentDictionary.Add("user", GVIncident.SelectedRows[0].Cells[1].Value.ToString());
             btn_editIncident.Enabled= true;
