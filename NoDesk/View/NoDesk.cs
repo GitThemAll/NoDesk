@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,52 +10,54 @@ using System.Windows.Forms;
 
 namespace NoDesk
 {
-	public partial class NoDesk : Form
-	{
-		private Dashboard dashboard;
-		public NoDesk()
-		{
-			InitializeComponent();
-			
-		}
+    public partial class NoDesk : Form
+    {
+        private Dashboard dashboard;
+        public NoDesk()
+        {
+            InitializeComponent();
+
+        }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-	        try
-	        {
-				string usernameValue = !string.IsNullOrEmpty(username.Text.Trim()) ? username.Text.Trim() : string.Empty;
-		        string passwordValue = !string.IsNullOrEmpty(password.Text.Trim()) ? password.Text.Trim() : string.Empty;
-		        if (usernameValue == string.Empty || passwordValue == string.Empty)
-		        {
-			        throw new Exception(usernameValue == string.Empty && passwordValue == string.Empty ? "emptyFields" :
-				        usernameValue == string.Empty ? "emptyUsername" : "emptyPassword");
-		        }
-				UserController userController = new UserController();
-				User user=	userController.get(x => x.email == usernameValue & x.password == passwordValue).Count>0 ?
-					userController.get(x => x.email == usernameValue & x.password == passwordValue)[0] : null;
-				
-				if (user == null)
-				{
-					throw new Exception("Unoath");
-				}
+            try
+            {
+                string usernameValue = !string.IsNullOrEmpty(username.Text.Trim()) ? username.Text.Trim() : string.Empty;
+                string passwordValue = !string.IsNullOrEmpty(password.Text.Trim()) ? password.Text.Trim() : string.Empty;
+                if (usernameValue == string.Empty || passwordValue == string.Empty)
+                {
+                    throw new Exception(usernameValue == string.Empty && passwordValue == string.Empty ? "emptyFields" :
+                        usernameValue == string.Empty ? "emptyUsername" : "emptyPassword");
+                }
+                UserController userController = new UserController();
+                List<User> userlist = userController.get(x => x.email == usernameValue & x.password == passwordValue);
+                User user = userlist.Count > 0 ? userlist[0] : null;
 
-				Program.logged = true;
-				this.Hide();
-				dashboard =new Dashboard(user);
-				dashboard.Show();
 
-	        }
-	        catch (Exception exception)
-	        {
-		        ErrorHandler.DisplayError(exception);
-	        }
-		}
 
-		private void close_btn_Click(object sender, EventArgs e)
+                if (user == null)
+                {
+                    throw new Exception("Unoath");
+                }
+
+                Program.logged = true;
+                this.Hide();
+                dashboard = new Dashboard(user);
+                dashboard.Show();
+
+            }
+            catch (Exception exception)
+            {
+                ErrorHandler.DisplayError(exception);
+            }
+        }
+	     
+        private void close_btn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-	
+
     }
 }

@@ -88,7 +88,7 @@
             this.copyLBL.Location = new System.Drawing.Point(10, 14);
             this.copyLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.copyLBL.Name = "copyLBL";
-            this.copyLBL.Size = new System.Drawing.Size(142, 24);
+            this.copyLBL.Size = new System.Drawing.Size(183, 29);
             this.copyLBL.TabIndex = 0;
             this.copyLBL.Text = "© 2020 Group 1";
             // 
@@ -122,6 +122,7 @@
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
             this.incidentBTN.UseVisualStyleBackColor = true;
+            this.incidentBTN.Click += new System.EventHandler(this.incidentBTN_Click);
             // 
             // dashboardBTN
             // 
@@ -159,7 +160,7 @@
             this.servicedeskLBL.Location = new System.Drawing.Point(47, 42);
             this.servicedeskLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.servicedeskLBL.Name = "servicedeskLBL";
-            this.servicedeskLBL.Size = new System.Drawing.Size(139, 25);
+            this.servicedeskLBL.Size = new System.Drawing.Size(175, 31);
             this.servicedeskLBL.TabIndex = 1;
             this.servicedeskLBL.Text = "Service Desk";
             // 
@@ -168,10 +169,10 @@
             this.gardengroupLBL.AutoSize = true;
             this.gardengroupLBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gardengroupLBL.ForeColor = System.Drawing.Color.White;
-            this.gardengroupLBL.Location = new System.Drawing.Point(16, 15);
+            this.gardengroupLBL.Location = new System.Drawing.Point(-7, 0);
             this.gardengroupLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gardengroupLBL.Name = "gardengroupLBL";
-            this.gardengroupLBL.Size = new System.Drawing.Size(222, 33);
+            this.gardengroupLBL.Size = new System.Drawing.Size(280, 42);
             this.gardengroupLBL.TabIndex = 0;
             this.gardengroupLBL.Text = "Garden Group ";
             // 
@@ -194,7 +195,7 @@
             this.dashboardLBL.Location = new System.Drawing.Point(31, 24);
             this.dashboardLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dashboardLBL.Name = "dashboardLBL";
-            this.dashboardLBL.Size = new System.Drawing.Size(175, 37);
+            this.dashboardLBL.Size = new System.Drawing.Size(215, 46);
             this.dashboardLBL.TabIndex = 0;
             this.dashboardLBL.Text = "Dashboard";
             // 
@@ -209,7 +210,7 @@
             this.UnResolvedIncidentsProgressBar.InnerMargin = 2;
             this.UnResolvedIncidentsProgressBar.InnerWidth = -1;
             this.UnResolvedIncidentsProgressBar.Location = new System.Drawing.Point(541, 211);
-            this.UnResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UnResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.UnResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.UnResolvedIncidentsProgressBar.Name = "UnResolvedIncidentsProgressBar";
             this.UnResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -239,7 +240,7 @@
             this.unresolvedLBL.Location = new System.Drawing.Point(532, 138);
             this.unresolvedLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unresolvedLBL.Name = "unresolvedLBL";
-            this.unresolvedLBL.Size = new System.Drawing.Size(206, 24);
+            this.unresolvedLBL.Size = new System.Drawing.Size(258, 29);
             this.unresolvedLBL.TabIndex = 3;
             this.unresolvedLBL.Text = "Unresolved Incidents";
             // 
@@ -251,7 +252,7 @@
             this.ticketsopenLBL.Location = new System.Drawing.Point(558, 174);
             this.ticketsopenLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ticketsopenLBL.Name = "ticketsopenLBL";
-            this.ticketsopenLBL.Size = new System.Drawing.Size(145, 15);
+            this.ticketsopenLBL.Size = new System.Drawing.Size(178, 18);
             this.ticketsopenLBL.TabIndex = 4;
             this.ticketsopenLBL.Text = "All Tickets Currently Open";
             // 
@@ -266,7 +267,7 @@
             this.PastIncidentsProgressBar.InnerMargin = 2;
             this.PastIncidentsProgressBar.InnerWidth = -1;
             this.PastIncidentsProgressBar.Location = new System.Drawing.Point(810, 211);
-            this.PastIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PastIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.PastIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.PastIncidentsProgressBar.Name = "PastIncidentsProgressBar";
             this.PastIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -296,7 +297,7 @@
             this.attentionLBL.Location = new System.Drawing.Point(801, 174);
             this.attentionLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.attentionLBL.Name = "attentionLBL";
-            this.attentionLBL.Size = new System.Drawing.Size(227, 15);
+            this.attentionLBL.Size = new System.Drawing.Size(273, 18);
             this.attentionLBL.TabIndex = 7;
             this.attentionLBL.Text = "These Tickets Need Immediate Attention";
             // 
@@ -308,7 +309,7 @@
             this.deadlineLBL.Location = new System.Drawing.Point(803, 138);
             this.deadlineLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.deadlineLBL.Name = "deadlineLBL";
-            this.deadlineLBL.Size = new System.Drawing.Size(228, 24);
+            this.deadlineLBL.Size = new System.Drawing.Size(288, 29);
             this.deadlineLBL.TabIndex = 6;
             this.deadlineLBL.Text = "Incidents Past Deadline";
             // 
@@ -320,7 +321,7 @@
             this.label1.Location = new System.Drawing.Point(288, 174);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 15);
+            this.label1.Size = new System.Drawing.Size(178, 18);
             this.label1.TabIndex = 10;
             this.label1.Text = "All Tickets Currently Open";
             // 
@@ -332,7 +333,7 @@
             this.label2.Location = new System.Drawing.Point(275, 138);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 24);
+            this.label2.Size = new System.Drawing.Size(235, 29);
             this.label2.TabIndex = 9;
             this.label2.Text = "Resolved Incidents";
             // 
@@ -347,7 +348,7 @@
             this.ResolvedIncidentsProgressBar.InnerMargin = 2;
             this.ResolvedIncidentsProgressBar.InnerWidth = -1;
             this.ResolvedIncidentsProgressBar.Location = new System.Drawing.Point(276, 211);
-            this.ResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResolvedIncidentsProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.ResolvedIncidentsProgressBar.MarqueeAnimationSpeed = 2000;
             this.ResolvedIncidentsProgressBar.Name = "ResolvedIncidentsProgressBar";
             this.ResolvedIncidentsProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -371,7 +372,7 @@
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1053, 494);
@@ -391,6 +392,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.leftPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

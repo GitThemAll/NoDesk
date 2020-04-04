@@ -16,6 +16,17 @@ namespace NoDesk
 	{
 		//todo make all  methods async.
 		private List<User> allUsers;
+		public List<User> employees
+		{
+			get
+			{
+				if (this.allUsers == null)
+				{
+					this.getAll();
+				}
+				return this.allUsers.FindAll(x => x.type == UserType.Employee);
+			}
+		}
 		public List<User> get(Expression<Func<User, bool>> filter)
 		{
 			List<User> users = Database.userCollectionObjs.Find(filter).ToList();
@@ -65,6 +76,6 @@ namespace NoDesk
 		{
 			Database.userCollectionObjs.InsertOne(user);
 		}
-    
+
 	}
 }

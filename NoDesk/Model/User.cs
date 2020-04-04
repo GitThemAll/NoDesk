@@ -37,5 +37,10 @@ namespace NoDesk
 		[BsonElement("password")]
 		public string password { get; set; }
 
+		public UserType type { get; set; }
+		public override string ToString()
+		{
+			return this.firstname + " " + this.lastname;
+		}
 	}
 }

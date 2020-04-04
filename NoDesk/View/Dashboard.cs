@@ -54,5 +54,17 @@ namespace NoDesk
 		{
 
 		}
+
+		private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void incidentBTN_Click(object sender, EventArgs e)
+		{
+			IncidentManagement incidentManagement = new IncidentManagement(user, this);
+			incidentManagement.Show();
+			this.Hide();
+		}
 	}
 }

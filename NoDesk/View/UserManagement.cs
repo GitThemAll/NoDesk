@@ -80,5 +80,17 @@ namespace NoDesk.View
             GVUser.Rows.Clear();
             AddAll();
         }
+
+        private void incidentBTN_Click(object sender, EventArgs e)
+        {
+            IncidentManagement incidentManagement = new IncidentManagement(user, this.dashboard, this);
+            incidentManagement.Show();
+            this.Hide();
+        }
+
+        private void UserManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
