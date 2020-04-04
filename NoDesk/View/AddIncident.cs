@@ -13,7 +13,7 @@ namespace NoDesk.View
     public partial class AddIncident : Form
     {
         IncidentManagement incidentmanagment;
-        IncidentController incidentController;
+        IncidentController incidentController;        
         UserController userController = new UserController();
         private IncidentManagement incidentManagement;
         private Dictionary<string, string> incidentDictionary;
@@ -41,16 +41,17 @@ namespace NoDesk.View
         private void btn_addIncident_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(inpt_incident_dueDate.Text)|| string.IsNullOrEmpty(inpt_incident_summary.Text)||
-                string.IsNullOrEmpty(inpt_incident_subject.Text)|| string.IsNullOrEmpty(inpt_incident_user.Text))
+                string.IsNullOrEmpty(inpt_incident_subject.Text)|| string.IsNullOrEmpty(inpt_incident_user.Text) || string.IsNullOrEmpty(inpt_incident_email.Text))
             {
                 ErrorHandler.DisplayError(new Exception("emptyFields"));
                 return;
             }
             DateTime due = DateTime.Parse(inpt_incident_dueDate.Text);
-            this.incidentController.insert(new Incident(inpt_incident_subject.Text,inpt_incident_user.Text,inpt_incident_summary.Text,
-                due, this.assignedEmployee));
+            this.incidentController.insert(new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due, this.assignedEmployee));
             this.incidentmanagment.BringToFront();
             this.incidentmanagment.RefreshGV();
+            MailerController mailer = new MailerController(inpt_incident_email.Text);
+            mailer.sendMail(inpt_incident_email.Text,new Incident(inpt_incident_subject.Text, inpt_incident_user.Text, inpt_incident_summary.Text, due, this.assignedEmployee));
             this.Close();
         }
 
