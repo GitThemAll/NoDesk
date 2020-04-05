@@ -14,7 +14,6 @@ namespace NoDesk
     public partial class NoDesk : Form
     {
         private Dashboard dashboard;
-        private EmployeeDashboardForm employeeDashboardForm;
         public NoDesk()
         {
             InitializeComponent();
