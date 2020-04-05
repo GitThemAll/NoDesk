@@ -12,6 +12,27 @@ namespace NoDesk
 	[BsonIgnoreExtraElements]
 	public class User : BaseModel 
 	{
+<<<<<<< Updated upstream
+=======
+		
+		public User(string firstname, string lastname, string email)
+		{
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.email = email;
+			type = UserType.Employee;
+		}
+
+		public User(string firstname, string lastname, string email, string password)
+		{
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.email = email;
+			this.password = password;
+			type = UserType.Admin;
+		}
+
+>>>>>>> Stashed changes
 		[BsonRepresentation(BsonType.ObjectId)]
 		public ObjectId id { get; set; }
 

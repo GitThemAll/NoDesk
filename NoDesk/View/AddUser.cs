@@ -26,6 +26,7 @@ namespace NoDesk.View
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
+<<<<<<< Updated upstream
             User user = new User()
             {
                 email = txtemail.Text,
@@ -34,6 +35,19 @@ namespace NoDesk.View
                 password = txtpassword.Text
             
             };
+=======
+            User user = null;
+            
+            if (txtpassword.Text != "" || rbYes.Checked)
+            {
+                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
+            }
+            else
+            {
+                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text);
+
+            }
+>>>>>>> Stashed changes
             userController.insert(user);
             userManagement.RefreshGV();
             this.Close();

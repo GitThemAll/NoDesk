@@ -122,19 +122,19 @@
             this.lbladmin.AutoSize = true;
             this.lbladmin.Location = new System.Drawing.Point(64, 239);
             this.lbladmin.Name = "lbladmin";
-            this.lbladmin.Size = new System.Drawing.Size(57, 17);
+            this.lbladmin.Size = new System.Drawing.Size(37, 17);
             this.lbladmin.TabIndex = 9;
-            this.lbladmin.Text = "isAdmin";
+            this.lbladmin.Text = "Role";
             // 
             // rbYes
             // 
             this.rbYes.AutoSize = true;
             this.rbYes.Location = new System.Drawing.Point(156, 239);
             this.rbYes.Name = "rbYes";
-            this.rbYes.Size = new System.Drawing.Size(53, 21);
+            this.rbYes.Size = new System.Drawing.Size(68, 21);
             this.rbYes.TabIndex = 10;
             this.rbYes.TabStop = true;
-            this.rbYes.Text = "Yes";
+            this.rbYes.Text = "Admin";
             this.rbYes.UseVisualStyleBackColor = true;
             this.rbYes.CheckedChanged += new System.EventHandler(this.rbYes_CheckedChanged);
             // 
@@ -143,10 +143,10 @@
             this.rbNo.AutoSize = true;
             this.rbNo.Location = new System.Drawing.Point(239, 239);
             this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(47, 21);
+            this.rbNo.Size = new System.Drawing.Size(59, 21);
             this.rbNo.TabIndex = 11;
             this.rbNo.TabStop = true;
-            this.rbNo.Text = "No";
+            this.rbNo.Text = "User";
             this.rbNo.UseVisualStyleBackColor = true;
             this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
             // 
