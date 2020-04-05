@@ -44,13 +44,8 @@ namespace NoDesk
 
 		public List<Incident> getAll()
 		{
-			if (this.allincidents == null)
-			{
-				List<Incident> incidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
-				this.allincidents = incidents;
-			}
-			
-			return this.allincidents;
+			this.allincidents = Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
+			return Database.incidentCollectionObjs.Find(new BsonDocument()).ToList();
 		}
 
 		public void insert(List<Incident> incidents)
@@ -101,6 +96,11 @@ namespace NoDesk
 			Database.incidentCollectionObjs.UpdateMany(filter, update);
 		}
 
+		public void replace(Expression<Func<Incident, bool>> filter, Incident newValue)
+		{
+			Database.incidentCollectionObjs.ReplaceOne(filter, newValue);
+
+		}
 		public void updateOne(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)
 		{
 			var update = Builders<Incident>.Update.Set(set, newValue);

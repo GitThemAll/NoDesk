@@ -12,6 +12,7 @@ namespace NoDesk
 	public class Incident : BaseModel
 
 	{
+		[ObsoleteAttribute("This method will soon be deprecated. Use the constructor instead.")]
 		public Incident(string subject, string user, string summary, DateTime dueDate)
 		{
 			this.subject = subject;
@@ -22,9 +23,32 @@ namespace NoDesk
 			this.status = IncidentStatus.NotSolved;
 		}
 
+		public Incident(string subject, string user, string summary, DateTime dueDate, User assignedEmployee)
+		{
+			this.subject = subject;
+			this.user = user;
+			this.summary = summary;
+			this.dueDate = dueDate;
+			this.date = DateTime.Now;
+			this.status = IncidentStatus.NotSolved;
+			this.assignedEmployee = assignedEmployee;
+		}
+
+		public Incident(string id, string subject, string user, string summary, DateTime dueDate, User assignedEmployee, DateTime incidentDate, IncidentStatus status)
+		{
+			this.id =ObjectId.Parse(id);
+			this.subject = subject;
+			this.user = user;
+			this.summary = summary;
+			this.dueDate = dueDate;
+			this.date = incidentDate;
+			this.status = status;
+			this.assignedEmployee = assignedEmployee;
+		}
+
 		public void assignUser(User employee)
 		{
-			this.assignedEmployee = user;
+			this.assignedEmployee = employee;
 		}
 
 		[BsonRepresentation(BsonType.ObjectId)]
@@ -47,7 +71,7 @@ namespace NoDesk
 		public string summary { get; set; }
 
 		[BsonElement("assignedEmployee")]
-		public string assignedEmployee { get; set; }
+		public User assignedEmployee { get; set; }
 
 		[BsonDateTimeOptions(Kind = DateTimeKind.Local)]
 		[BsonElement("dueDate")]

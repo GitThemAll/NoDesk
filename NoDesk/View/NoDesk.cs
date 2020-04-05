@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NoDesk.View;
 
 namespace NoDesk
 {
     public partial class NoDesk : Form
     {
         private Dashboard dashboard;
+        private EmployeeDashboardForm employeeDashboardForm;
         public NoDesk()
         {
             InitializeComponent();
@@ -34,17 +36,25 @@ namespace NoDesk
                 List<User> userlist = userController.get(x => x.email == usernameValue & x.password == passwordValue);
                 User user = userlist.Count > 0 ? userlist[0] : null;
 
-
-
                 if (user == null)
                 {
                     throw new Exception("Unoath");
                 }
 
+                if (user.type == UserType.Admin)
+                {
+	                dashboard = new Dashboard(user);
+	                dashboard.Show();
+                }
+                if (user.type == UserType.Employee)
+                {
+	                employeeDashboardForm = new EmployeeDashboardForm(user); 
+	                employeeDashboardForm.Show();
+                }
+                
                 Program.logged = true;
                 this.Hide();
-                dashboard = new Dashboard(user);
-                dashboard.Show();
+                
 
             }
             catch (Exception exception)
