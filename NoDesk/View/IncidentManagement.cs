@@ -153,10 +153,10 @@ namespace NoDesk.View
         {
             GVIncident.ClearSelection();
             bool found = false;
-            string searchString = inpt_searchText.Text.Trim();
+            string searchString = inpt_searchText.Text.Trim().ToLower();
             foreach (DataGridViewRow row in GVIncident.Rows)
             {
-                if (row.Cells["user"].Value.ToString().Contains(searchString))
+                if (row.Cells["user"].Value.ToString().ToLower().Contains(searchString))
                 {
                     GVIncident.CurrentRow.Selected = false;
                     GVIncident.Rows[row.Index].Selected = true;
