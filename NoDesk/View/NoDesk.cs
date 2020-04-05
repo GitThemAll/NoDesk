@@ -14,6 +14,7 @@ namespace NoDesk
     public partial class NoDesk : Form
     {
         private Dashboard dashboard;
+        private EmployeeDashboardForm employeeDashboardForm;
         public NoDesk()
         {
             InitializeComponent();
@@ -40,8 +41,10 @@ namespace NoDesk
                     throw new Exception("Unoath");
                 }
 
+
                 dashboard = new Dashboard(user);
                 dashboard.Show();
+
 
 
                 Program.logged = true;

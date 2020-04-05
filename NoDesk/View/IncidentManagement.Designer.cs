@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.leftPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.copyLBL = new System.Windows.Forms.Label();
@@ -231,6 +232,7 @@
             this.GVIncident.AllowUserToDeleteRows = false;
             this.GVIncident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GVIncident.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+
             this.ID,
             this.user,
             this.Subject,
@@ -239,6 +241,7 @@
             this.summary,
             this.employee,
             this.dueDate});
+
             this.GVIncident.Location = new System.Drawing.Point(372, 258);
             this.GVIncident.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GVIncident.Name = "GVIncident";
@@ -380,7 +383,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GVIncident)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

@@ -27,6 +27,7 @@ namespace NoDesk.View
 			this.incidentmanagment = incidentManagement;
 			this.incidentController = incidentController;
 			this.btn_editIncident.Enabled = false;
+
 			this.inpt_incidentStatus.Enabled = false;
 			this.btn_editIncident.Hide();
 		}
@@ -73,6 +74,7 @@ namespace NoDesk.View
 				inpt_incident_assignedEmployee.Items.Insert(count, item);
 				count++;
 			}
+
 			inpt_incidentStatus.DataSource= Enum.GetValues(typeof(IncidentStatus)).Cast<IncidentStatus>();
 			if (this.incident!=null)
 			{
@@ -80,6 +82,7 @@ namespace NoDesk.View
 				inpt_incident_summary.Text = this.incident.summary;
 				inpt_incident_subject.Text = this.incident.subject;
 				inpt_incident_dueDate.Value = this.incident.dueDate;
+
 				inpt_incidentStatus.SelectedItem = inpt_incidentStatus.FindString(this.incident.status.ToString());
 				inpt_incidentStatus.SelectedIndex= inpt_incidentStatus.FindString(this.incident.status.ToString());
 				if (this.incident.assignedEmployee == null)
@@ -93,7 +96,7 @@ namespace NoDesk.View
 						inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
 					inpt_incident_assignedEmployee.SelectedIndex = inpt_incident_assignedEmployee.FindString(this.incident.assignedEmployee.ToString());
 				}
-				
+
 				return;
 			}
 			inpt_incident_assignedEmployee.SelectedItem = 0;
@@ -118,7 +121,9 @@ namespace NoDesk.View
 			this.incident.subject = inpt_incident_subject.Text;
 			this.incident.dueDate = inpt_incident_dueDate.Value;
 			this.incident.summary = inpt_incident_summary.Text;
+
 			this.incident.status= (IncidentStatus)inpt_incidentStatus.SelectedValue;
+
 			this.incident.assignedEmployee = inpt_incident_assignedEmployee.SelectedItem.ToString()== "Not assigned" ? null : (User)inpt_incident_assignedEmployee.SelectedItem;
 			this.incidentController.replace((x => x.id == this.incident.id), this.incident);
 			this.incidentmanagment.BringToFront();
