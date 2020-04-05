@@ -38,8 +38,8 @@
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.lbladmin = new System.Windows.Forms.Label();
-            this.rbYes = new System.Windows.Forms.RadioButton();
-            this.rbNo = new System.Windows.Forms.RadioButton();
+            this.rbAdmin = new System.Windows.Forms.RadioButton();
+            this.rbEmployee = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lblemail
@@ -85,7 +85,7 @@
             // txtemail
             // 
             this.txtemail.Location = new System.Drawing.Point(117, 62);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtemail.Margin = new System.Windows.Forms.Padding(2);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(133, 20);
             this.txtemail.TabIndex = 4;
@@ -93,7 +93,7 @@
             // txtfirstname
             // 
             this.txtfirstname.Location = new System.Drawing.Point(117, 108);
-            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtfirstname.Margin = new System.Windows.Forms.Padding(2);
             this.txtfirstname.Name = "txtfirstname";
             this.txtfirstname.Size = new System.Drawing.Size(133, 20);
             this.txtfirstname.TabIndex = 5;
@@ -101,7 +101,7 @@
             // txtlastname
             // 
             this.txtlastname.Location = new System.Drawing.Point(117, 155);
-            this.txtlastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlastname.Margin = new System.Windows.Forms.Padding(2);
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(133, 20);
             this.txtlastname.TabIndex = 6;
@@ -109,7 +109,7 @@
             // txtpassword
             // 
             this.txtpassword.Location = new System.Drawing.Point(117, 228);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(133, 20);
             this.txtpassword.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             this.btnsubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnsubmit.Location = new System.Drawing.Point(80, 285);
-            this.btnsubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.Size = new System.Drawing.Size(146, 30);
             this.btnsubmit.TabIndex = 8;
@@ -136,39 +136,39 @@
             this.lbladmin.TabIndex = 9;
             this.lbladmin.Text = "Role";
             // 
-            // rbYes
+            // rbAdmin
             // 
-            this.rbYes.AutoSize = true;
-            this.rbYes.Location = new System.Drawing.Point(117, 194);
-            this.rbYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rbYes.Name = "rbYes";
-            this.rbYes.Size = new System.Drawing.Size(67, 26);
-            this.rbYes.TabIndex = 10;
-            this.rbYes.TabStop = true;
-            this.rbYes.Text = "Admin";
-            this.rbYes.UseVisualStyleBackColor = true;
-            this.rbYes.CheckedChanged += new System.EventHandler(this.rbYes_CheckedChanged);
+            this.rbAdmin.AutoSize = true;
+            this.rbAdmin.Location = new System.Drawing.Point(117, 194);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.rbAdmin.Name = "rbAdmin";
+            this.rbAdmin.Size = new System.Drawing.Size(67, 26);
+            this.rbAdmin.TabIndex = 10;
+            this.rbAdmin.TabStop = true;
+            this.rbAdmin.Text = "Admin";
+            this.rbAdmin.UseVisualStyleBackColor = true;
+            this.rbAdmin.CheckedChanged += new System.EventHandler(this.rbYes_CheckedChanged);
             // 
-            // rbNo
+            // rbEmployee
             // 
-            this.rbNo.AutoSize = true;
-            this.rbNo.Location = new System.Drawing.Point(179, 194);
-            this.rbNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rbNo.Name = "rbNo";
-            this.rbNo.Size = new System.Drawing.Size(60, 26);
-            this.rbNo.TabIndex = 11;
-            this.rbNo.TabStop = true;
-            this.rbNo.Text = "User";
-            this.rbNo.UseVisualStyleBackColor = true;
-            this.rbNo.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
+            this.rbEmployee.AutoSize = true;
+            this.rbEmployee.Location = new System.Drawing.Point(179, 194);
+            this.rbEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.rbEmployee.Name = "rbEmployee";
+            this.rbEmployee.Size = new System.Drawing.Size(84, 26);
+            this.rbEmployee.TabIndex = 11;
+            this.rbEmployee.TabStop = true;
+            this.rbEmployee.Text = "Employee";
+            this.rbEmployee.UseVisualStyleBackColor = true;
+            this.rbEmployee.CheckedChanged += new System.EventHandler(this.rbNo_CheckedChanged);
             // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 370);
-            this.Controls.Add(this.rbNo);
-            this.Controls.Add(this.rbYes);
+            this.Controls.Add(this.rbEmployee);
+            this.Controls.Add(this.rbAdmin);
             this.Controls.Add(this.lbladmin);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.txtpassword);
@@ -179,7 +179,7 @@
             this.Controls.Add(this.lblpassword);
             this.Controls.Add(this.lblfirstname);
             this.Controls.Add(this.lblemail);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddUser";
             this.Text = "AddUser";
             this.ResumeLayout(false);
@@ -199,7 +199,7 @@
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Button btnsubmit;
         private System.Windows.Forms.Label lbladmin;
-        private System.Windows.Forms.RadioButton rbYes;
-        private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.RadioButton rbAdmin;
+        private System.Windows.Forms.RadioButton rbEmployee;
     }
 }
