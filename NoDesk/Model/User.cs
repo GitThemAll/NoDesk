@@ -14,13 +14,11 @@ namespace NoDesk
 	[BsonIgnoreExtraElements]
 	public class User : BaseModel 
 	{
-        public User(string firstname, string lastname, string email)
+        public User()
         {
-			this.firstname = firstname;
-			this.lastname = lastname;
-			this.email = email;
-			type = UserType.Employee;
-		}
+        }
+
+    
 
         public User(string firstname, string lastname, string email, string password)
 		{
@@ -28,7 +26,6 @@ namespace NoDesk
 			this.lastname = lastname;
 			this.email = email;
 			this.password = password;
-			type = UserType.Admin;
 		}
 
 		[BsonRepresentation(BsonType.ObjectId)]

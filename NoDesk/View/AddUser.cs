@@ -19,25 +19,32 @@ namespace NoDesk.View
         {
             InitializeComponent();
             this.userManagement = userManagement;
-            lblpassword.Hide();
-            txtpassword.Hide();
+           
         }
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            User user = null;
+            User user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
 
-            if (txtpassword.Text != "" || rbYes.Checked)
+            if (rbAdmin.Checked)
             {
-                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
+                user.type = UserType.Admin;
+                userController.insert(user);
+
+            }
+            else if (rbEmployee.Checked)
+            {
+                user.type = UserType.Employee;
+                userController.insert(user);
+
             }
             else
             {
-                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text);
-
+                string text = "Please check employee type";
+                MessageBox.Show(text);
             }
-            userController.insert(user);
+            
             userManagement.RefreshGV();
             userManagement.addUserForm = null;
             this.Close();
@@ -45,14 +52,12 @@ namespace NoDesk.View
 
         private void rbYes_CheckedChanged(object sender, EventArgs e)
         {
-            lblpassword.Show();
-            txtpassword.Show();
+          
         }
 
         private void rbNo_CheckedChanged(object sender, EventArgs e)
         {
-            lblpassword.Hide();
-            txtpassword.Hide();
+           
         }
     }
 }

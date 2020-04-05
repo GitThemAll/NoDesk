@@ -71,9 +71,7 @@ namespace NoDesk.View
 		        this.addUserForm = new AddUser(this);
 		        addUserForm.Show();
             }
-            this.addUserForm.BringToFront();
-            
-
+            this.addUserForm.BringToFront();     
         }
         public void RefreshGV()
         {
