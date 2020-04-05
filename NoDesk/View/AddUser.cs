@@ -26,7 +26,17 @@ namespace NoDesk.View
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            User user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
+            User user = null;
+
+            if (txtpassword.Text != "" || rbYes.Checked)
+            {
+                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text, txtpassword.Text);
+            }
+            else
+            {
+                user = new User(txtfirstname.Text, txtlastname.Text, txtemail.Text);
+
+            }
             userController.insert(user);
             userManagement.RefreshGV();
             userManagement.addUserForm = null;
