@@ -16,9 +16,41 @@ namespace NoDesk
 		//todo make all methods async
 		DateTime dateToday = DateTime.Now;
 		private List<Incident> allincidents;
-		private List<Incident> pastIncidents;
-		private List<Incident> solvedIncidents;
-		private List<Incident> notSolvedIncidents;
+		public  List<Incident> pastIncidents
+		{
+			get
+			{
+				if (this.allincidents == null)
+				{
+					this.getAll();
+				}
+
+				return this.allincidents.FindAll(x => x.dueDate < dateToday);
+			}
+		}
+		public List<Incident> solvedIncidents
+		{
+			get
+			{
+				if (this.allincidents == null)
+				{
+					this.getAll();
+				}
+				return this.allincidents.FindAll(x => x.status == IncidentStatus.Solved);
+			}
+		}
+		public List<Incident> notSolvedIncidents
+		{
+			get
+			{
+				if (this.allincidents == null)
+				{
+					this.getAll();
+				}
+
+				return this.allincidents.FindAll(x => x.status != IncidentStatus.Solved);
+			}
+		}
 		public int solvedIncidentsPercentage
 		{
 			get { return solvedIncidents.Count * 100 / allincidents.Count; }
@@ -34,6 +66,7 @@ namespace NoDesk
 			get { return notSolvedIncidents.Count * 100 / allincidents.Count;}
 			private set { }
 		}
+		
 
 		public List<Incident> get(Expression<Func<Incident, bool>> filter)
 		{
@@ -59,37 +92,10 @@ namespace NoDesk
 			Database.incidentCollectionObjs.InsertOne(incident);
 		}
 
-		public  List<Incident> getSolvedIncidents()
-		{
-			if (this.allincidents == null)
-			{
-				this.getAll();
-			}
+		
 
-			this.solvedIncidents = this.allincidents.FindAll(x => x.status == IncidentStatus.Solved);
-			return this.solvedIncidents;
-		}
-
-		public List<Incident> getPastIncidents()
-		{
-			if (this.allincidents == null)
-			{
-				this.getAll();
-			}
-
-			this.pastIncidents = this.allincidents.FindAll(x => x.dueDate < dateToday);
-			return this.pastIncidents;
-		}
-		public List<Incident> getnotYetSolvedIncidents()
-		{
-			if (this.allincidents == null)
-			{
-				this.getAll();
-			}
-
-			this.notSolvedIncidents = this.allincidents.FindAll(x => x.status != IncidentStatus.Solved);
-			return this.notSolvedIncidents;
-		}
+		
+		
 		public void updateMany(Expression<Func<Incident, bool>> filter, Expression<Func<Incident, string>> set, string newValue)
 		{
 			var update = Builders<Incident>.Update.Set(set, newValue);

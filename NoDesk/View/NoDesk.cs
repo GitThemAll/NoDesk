@@ -14,7 +14,6 @@ namespace NoDesk
     public partial class NoDesk : Form
     {
         private Dashboard dashboard;
-        private EmployeeDashboardForm employeeDashboardForm;
         public NoDesk()
         {
             InitializeComponent();
@@ -41,20 +40,13 @@ namespace NoDesk
                     throw new Exception("Unoath");
                 }
 
-                if (user.type == UserType.Admin)
-                {
-	                dashboard = new Dashboard(user);
-	                dashboard.Show();
-                }
-                if (user.type == UserType.Employee)
-                {
-	                employeeDashboardForm = new EmployeeDashboardForm(user); 
-	                employeeDashboardForm.Show();
-                }
-                
+                dashboard = new Dashboard(user);
+                dashboard.Show();
+
+
                 Program.logged = true;
                 this.Hide();
-                
+
 
             }
             catch (Exception exception)
@@ -62,7 +54,7 @@ namespace NoDesk
                 ErrorHandler.DisplayError(exception);
             }
         }
-	     
+
         private void close_btn_Click(object sender, EventArgs e)
         {
             this.Close();

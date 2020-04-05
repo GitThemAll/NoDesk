@@ -121,6 +121,7 @@
             this.incidentBTN.TabIndex = 2;
             this.incidentBTN.Text = "Incident Management";
             this.incidentBTN.UseVisualStyleBackColor = true;
+            this.incidentBTN.Click += new System.EventHandler(this.incidentBTN_Click);
             // 
             // dashboardBTN
             // 

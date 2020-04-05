@@ -19,6 +19,7 @@ namespace NoDesk.View
         Dashboard dashboard;
         UserController userController = new UserController();
         internal AddUser addUserForm { get; set; }
+        IncidentManagement incidentMangement;
 
         public UserManagement(User user, Dashboard dashboard)
         {
@@ -31,7 +32,7 @@ namespace NoDesk.View
         private void dashboardBTN_Click(object sender, EventArgs e)
         {
             dashboard.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void UserManagement_Load(object sender, EventArgs e)
@@ -83,8 +84,12 @@ namespace NoDesk.View
 
         private void incidentBTN_Click(object sender, EventArgs e)
         {
-            IncidentManagement incidentManagement = new IncidentManagement(user, this.dashboard, this);
-            incidentManagement.Show();
+            if (this.incidentMangement == null)
+            {
+                incidentMangement = new IncidentManagement(this.user, this.dashboard);
+            }
+
+            incidentMangement.Show();
             this.Hide();
         }
 
@@ -92,5 +97,7 @@ namespace NoDesk.View
         {
             Application.Exit();
         }
+
+    
     }
 }
