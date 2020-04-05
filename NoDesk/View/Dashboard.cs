@@ -66,15 +66,16 @@ namespace NoDesk
 		private void loadEmployee()
 		{
 			List<Incident> employeeIncidents = this.incidentController.get(x => x.assignedEmployee == this.user);
+			int employeeIncidentsNumber = employeeIncidents.Count == 0 ? 1 : employeeIncidents.Count;
 			int employeeSolvedIncidents = employeeIncidents.FindAll(x => x.status == IncidentStatus.Solved).Count;
 			int employeeNotsolvedIncidents= employeeIncidents.FindAll(x => x.status == IncidentStatus.NotSolved).Count;
 			int employeePastIncidents=employeeIncidents.FindAll(x => x.dueDate < DateTime.Now).Count;
 			UnResolvedIncidentsProgressBar.Text = string.Format("{0}/{1}", employeeNotsolvedIncidents, employeeIncidents.Count);
 			ResolvedIncidentsProgressBar.Text = string.Format("{0}/{1}", employeeSolvedIncidents, employeeIncidents.Count);
 			PastIncidentsProgressBar.Text = string.Format("{0}/{1}", employeePastIncidents, employeeIncidents.Count);
-			UnResolvedIncidentsProgressBar.Value = (employeeNotsolvedIncidents*100)/ employeeIncidents.Count;
-			PastIncidentsProgressBar.Value = (employeePastIncidents * 100) / employeeIncidents.Count;
-			ResolvedIncidentsProgressBar.Value = (employeeSolvedIncidents * 100) / employeeIncidents.Count;
+			UnResolvedIncidentsProgressBar.Value = (employeeNotsolvedIncidents*100)/ employeeIncidentsNumber;
+			PastIncidentsProgressBar.Value = (employeePastIncidents * 100) / employeeIncidentsNumber;
+			ResolvedIncidentsProgressBar.Value = (employeeSolvedIncidents * 100) / employeeIncidentsNumber;
 
 			usermanageBTN.Enabled = false;
 			usermanageBTN.Hide();
